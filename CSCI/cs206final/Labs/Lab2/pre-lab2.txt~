@@ -1,0 +1,20 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab #2
+Date: 09/06/2011
+
+Problem1
+$zero: The constant value 0;
+$0-$s7: Saved;
+$t0-$t9: Temporaries;
+$a0-$a3: Arguments;
+$v0-$v1: Values for results and expression evaluation;
+$gp: Global pointer;
+$fp: Frame pointer;
+$sp: Stack pointer;
+$ra: Return address;
+$at: Reserved for the assembler.
+
+Problem2
+addi $s1, $s3, 2:
+	-Instruction: 

@@ -1,0 +1,24 @@
+1c1,3
+< File permissions can be seen by typing ``ls -l''.
+---
+> This is an excerpt from Lab 0.
+> 
+> File permissions can be seen by typing ``ls -al''.
+3a6,7
+> drwx--x--x    2 cs208  cs           4096 Jan  2 10:27 .
+> drwx------    7 cs208  cs           4096 Dec 29 16:47 ..
+9c13,14
+< The first letter in the file permissions shown by ``ls -l''is the 
+---
+> ("ls -a" shows files beginning with ".")
+> The first letter in the file permissions shown by ``ls -al''is the 
+41c46,48
+< see the directory contents. Write permissions allow someone to add files 
+---
+> see the directory contents. 
+> 
+> Write permissions allow someone to add files 
+48c55
+< the owner can read the list of files in the directory, change
+---
+> the owner can read the list of files in the directory, change *random change*

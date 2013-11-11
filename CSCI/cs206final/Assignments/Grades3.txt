@@ -1,0 +1,8 @@
+4.1	29/30
+1 RegWrite should be 1 for both add and lw.
+
+4.2	30/30
+
+4.16	40/40
+
+Total: 99/100

@@ -1,0 +1,73 @@
+/*
+ *==============================================
+ * User Manual - Rover
+ *==============================================
+ *
+ * Presented by Yifan Ge
+ *
+ */
+ 
+Guaranteed to run on Red Hat Enterprise Linux 5
+(run on other operating systems at your own risk).
+
+Part 1: Getting Starting
+
+1.  Launch Eclipse in Linux.
+	(Applications -> Programming -> Eclipse)
+	
+2.  If MazeVizualizer.java is not already open, double click it from the package
+	explorer on the left hand side.
+	(Rover -> src -> (default package) -> Gui.java)
+
+3.  To execute (run) the program file click the green play button on the toolbar
+	or alternately hit Ctrl+F11 on your keyboard.
+
+4.  At this point Java should have executed all the startup code and there
+	should be a graphical user interface (GUI) on the screen from which the game
+	will be played.
+	
+Part 2: Playing the Game
+
+1.  Control the rover. 
+    You may see the arrows on the right of the window. You may control the 
+    rover by left click on those arrows or using the up, down, left, and right
+    arrows in the right bottom corner of your keyboard.
+    
+2.  The Task window.
+    The task window displays what task you need to finish and what material you 
+    need to have in order to finish the task. 
+    
+3.  The inventory window.
+    The inventory window shows the stuff that your rover is current carrying.
+    You may use these inventories to finish the task.
+
+4.  Pick up object.
+    In the right bottom corner of of the window, you may see a "Pick Up" button.
+    By moving your rover over one object and left clicking the "Pick Up" button,
+    you may pick object. However, only cakes, gears, and screws can be picked.
+    After picked up the object, the rover will carry the object and the
+    inventory window will display the object that has been added.
+ 
+5.  Portals.
+    On the board, you may see a black hole like object. That is a portal. If 
+    you move the rover over the portal, it will be teleported to a new room.
+    You may move the rover to the same the portal to get back to the previous
+    room.
+
+6.  Show the way back.
+    By left clicking on the "Show the way back" button in the right bottom 
+    corner. The portal that leads to the base will become flashing.
+    
+7.  Perform Task
+    After you get all the required materials and move the rover to the given
+    broken part, left clicking the "Perform Task" button will finish the task
+    and remove the required parts from your inventory. The broken part of the
+    ship will be fixed. Then the next task will appear in the task window. If
+    you finished all the tasks, the task window will display: "You win!"
+    
+Part 4: Finishing the Game
+
+1.  In the right bottom corner, there is a "Quit" button. By left click on that
+    button, you will close the window and leave the game.
+	
+2.  As an alternative, you can click the "X" at the very top-right of the GUI.

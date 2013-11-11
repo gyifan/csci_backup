@@ -1,0 +1,5 @@
+1286893042686	Delete element
+1286893354677	Delete element
+1286898153719	Extract constant 'FAHRENHEIT_FREEZING_POINT'
+1286898202532	Extract constant 'CONVERSION_FACTOR'
+1286898285974	Rename local variable 'doubleFahr'

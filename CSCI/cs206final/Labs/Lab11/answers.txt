@@ -1,0 +1,16 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab11
+Date: 11/15/2011
+
+Problem 1
+
+(1.1)
+port - is a character device file that is an image of the main memory of the computer while I/O ports are accessed
+
+full - contains major device number 1 and minor device number 7
+
+zero - is data sink. Data written on zero file is discarded
+
+(1.2)
+/dev/random and /dev/urandom are both random number source devices. However, the /dev/random will only return the random bytes when there is sufficient entropy and estimated number of bits of noise in the entropy pool. This give very high randomness. On the other hand, /dev/urandom will not wait for more entropy to get random number, which may be vulnerable to a cryptographic attack.

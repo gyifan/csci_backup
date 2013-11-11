@@ -1,0 +1,56 @@
+Yifan Ge
+Homework 1
+Due Monday, 1/30/2012
+
+Problem 1:
+a) int numdigits(int x){
+	if (x<10) 
+		return 0;
+	else
+		return 1+numdigits(x/10);
+   }
+
+b) int foo(int n){
+	int t=n, x=5;
+	while (t>1) {
+		x=t+x;
+		t=t-1;
+	}
+	return x;
+   }
+
+
+Problem 2:
+
+I picked F#
+
+a) Primitive types: bool, byte, sbyte, int16, uint16, int, uint32, int4, uint64, nativeint, unativeint, char, string, decimal, unit, void, float32(single), float(double).
+	type Boolean =
+		struct
+			interface IComparable
+			interface IConvertible
+			interface IComparable<bool>
+			interface IEquatable<bool>
+		end
+
+b) Constructors: Primary Constructor & Structure Constructor
+	type MyStruct =
+		struct
+			val X : int
+			val Y : int
+			val Z : int
+			new(x,y,z) = { X = x; Y = y; Z = z }
+		end
+	
+	let myStructure1 = new MyStruct(1,2,3)
+
+c) It allows casting but does not allow implicit coercion.
+
+d) It is strongly typed.
+
+e) let intAsObj = 20 :> obj;;
+   val intAsObj : obj
+   let stringDownCast = intAsObj :?> string;; (*System.InvalidCastException*)
+
+f) http://msdn.microsoft.com/en-us/library/dd233210.aspx
+   http://en.wikibooks.org/wiki/F_Sharp_Programming/Inheritance

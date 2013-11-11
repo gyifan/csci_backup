@@ -1,0 +1,48 @@
+Yifan Ge
+CSCI 208 Homework 4
+4/15/2012
+
+Problem 1:
+a) A tail recursive function has to have all the recursive call happens
+   in tail call sites, which the result of each recursive case has to be
+   a direct call of the original function.
+
+b) foldr :: (a -> b -> b) -> b -> [a] -> [a] -> b
+   foldr f z [] [] = z
+   foldr f z [] (x:xs) = foldr f (f z x) [] xs
+   foldr f z (x:xs) t  = foldr f z xs (x:t)
+
+Problem 2:
+a) <Haskell>:
+   ack :: Int -> Int -> Int
+   ack 0 n = (n+1)
+   ack m 0 = ack (m-1) 1
+   ack m n = ack (m-1) (ack m n-1)
+
+b) <Java>:
+   public int ack(int m, int n){
+       if (m==0) then return n+1;
+       elseif (n==0) then return ack(m-1,1);
+       else return ack(m-1,ack(m,n-1));
+   }
+
+c) Neither of them is a tail-recursive one because both of them calls a 
+   nested function, which prevent it to delet the current frame on the
+   stack. 
+
+d) <Haskell>: 
+   <Tail recursive version>:
+   ack :: Int -> Int -> [Int] -> Int
+   ack 0 n l = case l of
+                    []        -> (n+1)
+                    (x:ls)    -> ack x (n+1) ls
+   ack m 0 l = ack (m-1) 1 l
+   ack m n l = ack m (n-1) ((m-1):l)
+
+Problem 3:
+a) split is split the first parameter into only two parts, including empty
+      element.
+   parts is taken the first parameter and returns all the possible ways to
+      break it into multiple parts.
+
+b & c) see the matching.pl file.

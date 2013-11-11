@@ -1,0 +1,34 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab #2
+Date: 09/06/2011
+
+Problem2
+
+(2.1) 0x00004020
+
+(2.2) This word correspond to an instruction line: add $t0, $zero, $zero
+
+(2.3) 0x00000037
+
+(2.4) This word correspond to the value of x which declared at the biginning of the file. It's also where the result value stored.
+
+(2.5) If we only can see the address, we still can still identify the word by recognizing where the word is located. Program's variables are stored in Data, Dynamically allocated data is stored in Heap, Program in machine language is stored in Code. In our case, Data starts at location 0x10010000, Code starts at location 0x00400000. So we can know what the word correspond to based on it's location.
+
+(2.6) The label can show me where each label are located. Since the label contains additional information and easier to understand, it help us to follow the code.
+
+(2.7) Unchecking the hexadecimal check boxes changes the value from hex to decimal, which make the value clearer and easier to understand. It helps the programmer to debug when it has many calculations.
+
+Problem3
+
+(3.1) The result value is stored at address 0x10010004. 
+
+(3.2) The result value is 0x00000037 in hexadecimal and 55 in decimal.
+
+(3.3) The program has a counter, and sum. They both start with value 0. The counter always increases by one until it reaches a value that is greater than ten. For every step, we add the value of the counter to the sum. So the last value added to the sum is 10. Thus, the sum will have the value of 1+2+3+4+5+6+7+8+9+10 = 55. The total number of steps is 62 = 5*11 + 2 + 5
+
+(3.4) The new final value of the program is 0x0000008d in hexadecimal and 141 in decimal. Reason: Since we put a break point at addi, the counter $t0 increased to 2 before we change the sum $t1 to 89. So the sum is 89+3+4+5+6+7+8+9+10 = 141.
+
+(3.5) See problem3.c file
+
+

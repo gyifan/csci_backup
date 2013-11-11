@@ -1,0 +1,105 @@
+/*
+ *==============================================
+ * Test Plan - Rover
+ *==============================================
+ */
+ 
+ Board:-
+   1. The base room correctly contains broken parts of the ship and at least 
+      one portal.
+   2. Other rooms should not contain any broken parts of the ship and contains
+      at least two portals. (One portal that teleports to the previous room,
+      others teleport to the next rooms)
+   3. The board always displays 15*15 blocks. And it only displays broken ship 
+      parts, cakes, gears, and screws. If there is nothing there, the block will
+      be left blank.
+ 
+ Inventory:-
+   1. Action: pick up an object.
+      Result: the object will be added to the inventory if the object is a cake,
+              gear or screw.
+   2. Action: perform task.
+      Result: if performing task is executable, the inventory will have the
+              described object in described amount disappeared. Other stuff
+              remains.
+              
+ Task:-
+   1. Action: start the game.
+      Result: the task window will display a task with required object.
+   2. Action: perform the task.
+      Result: if the task is performed, the task in the task window will be
+              changed to the next task. If there is no more task left, it 
+              displays you win!
+      
+ Rover:-
+   1. Action: 
+          Move: Go up, go down, go left, or go right. (The next place is an empty
+          block)
+      Result:
+          The rover will move toward the given direction one block.
+          Go up -> Move towards north one block.
+          Go down -> Move towards south one block.
+          Go left -> Move towards west one block.
+          Go right -> Move towards east one block.
+          
+   2. Action:
+          Move to the edge of the board. (The next place is the wall)
+      Result:
+          The rover should not move into the wall. It will not do any movement.
+          
+   3. Action:
+          Move to an object. (The next place is occupied by an object)
+      Result:
+          The rover be able to move onto the object. The object will disappear
+          but the rover will appear on the same spot.
+          
+   4. Action:
+          Pick up an object. 
+      a. Condition: There is nothing underneath the rover.
+         Result: Nothing picked.
+      b. Condition: There is a Cake, Gear, or Screw underneath the rover.
+         Result: The rover will pick up the object. The object will disappear
+                 after the rover moved away. The inventory will add the picked
+                 object to the list.
+      c. Condition: There is a broken ship part or portal underneath the rover.
+         Result: The rover will not be able to pick up the object. The object
+                 still exists after the rover moved away. Nothing added to the
+                 inventory.
+   5. Action:
+          Performing an task.
+      a. Condition: the object underneath is not the described object.
+         Result: nothing happens.
+      b. Condition: the rover's inventory does not have all the required
+                    objects. 
+         Result: nothing happens.
+      c. Condition: the rover has enough inventory and is above the described
+                    object.
+         Result: the old image object will be changed to a new image object. 
+                 The required object in the inventory will be removed.
+          
+   
+ Portal:-
+   1. Action:
+          The rover steps on a portal.
+      a. Condition: The portal is a brand new portal. (The rover has never
+                    stepped on it before.)
+         Result: The rover will appear in a brand new room with all random
+                 settings. It will also appear to be on a portal in the new 
+                 room.
+      b. Condition: The portal is one that led the rover to the room.
+         Result: The rover will be brought back to the previous room and appear
+                 to be on the same portal that brought it to the new room.
+      c. Condition: The portal is a used one, but not the one where the rover
+                    came from.
+         Result: The rover will be to the old room, which the same portal did 
+                 before. 
+      d. Any portal is connected to one and only one different portal.
+      
+   2. Action:
+          Show the way back.
+      a. Condition: in the base room.
+         Result: nothing happens.
+      b. Condition: in one child room.
+         Result: the portal that brought the rover to this room will become
+                 flashing.
+                 

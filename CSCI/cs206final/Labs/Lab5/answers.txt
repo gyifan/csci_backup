@@ -1,0 +1,76 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab5
+Date: 09/27/2011
+
+Problem 1
+
+(1.1)	The return address is 0x4005b9
+
+(1.2)	0x7fff45308a1c: 0x0c
+	0x7fff45308a1d: 0x00
+	0x7fff45308a1e: 0x00
+	0x7fff45308a1f: 0x00
+
+(1.3)	It is a little endian processor
+
+(1.4)	In order to determine the endian convention, we can store 3 words in the stack. And make the first and third word to be 0xffffffff and the middle word to be 0x0000000c. Than we can print out the value for each word the check whether it's upper or lower end that 0x0c falls into. Check from the higher address to lower address. If it's 0x0c followed by three 0x00 bytes, it is big endian. If it's 0x0c preceeded by three 0x00 bytes, it is little endian.
+
+(1.5)	low address:
+
+		Local variable:
+		i:-
+			0x7fff45308a1c: 0x0c
+			0x7fff45308a1d: 0x00
+			0x7fff45308a1e: 0x00
+			0x7fff45308a1f: 0x00
+		buf[12]:-
+			0x7fff45308a20: 0xd0
+			0x7fff45308a21: 0x05
+			0x7fff45308a22: 0x40
+			0x7fff45308a23: 0x00
+			0x7fff45308a24: 0x00
+			0x7fff45308a25: 0x00
+			0x7fff45308a26: 0x00
+			0x7fff45308a27: 0x00
+			0x7fff45308a28: 0x00
+			0x7fff45308a29: 0x00
+			0x7fff45308a2a: 0x00
+			0x7fff45308a2b: 0x00
+		Parameters to the function:-
+			0x7fff45308a2c: 0x0c
+			0x7fff45308a2d: 0x00
+			0x7fff45308a2e: 0x00
+			0x7fff45308a2f: 0x00
+		The old base pointer:-
+			0x7fff45308a30: 0x40
+			0x7fff45308a31: 0x8a
+			0x7fff45308a32: 0x30
+			0x7fff45308a33: 0x45
+			0x7fff45308a34: 0xff
+			0x7fff45308a35: 0x7f
+			0x7fff45308a36: 0x00
+			0x7fff45308a37: 0x00
+		The return address:-
+			0x7fff45308a38: 0xb9
+			0x7fff45308a39: 0x05
+			0x7fff45308a3a: 0x40
+	High Address
+
+(1.6)	The return address has to be overwritten to make a arbitrary jump
+
+(1.7)	The code will be on stack
+
+(1.8)	The processor arbitrarily set the boundaries of these compartments. However, all the memories just addresses. The processor can execute code on any compartments. The processor may be able to manipulate data stored in the text segment.
+
+(1.9)	The address of the buf is far away from address of i. But closer to the address of j.
+
+(1.10)	Yes. If there is no boundary check, the input can go beyond the boundary, cause overflow and may possibly change the return address, which can force the program jump to an arbitrary address.
+
+
+Problem 2
+
+(2.1)	There are two things have been pointed out by the output. First is the fixed size local buffer. As we don't know what is put into the function, more characters might be put into the local buffer than it can handle. This could cause the overflow. Second is the strcpy instruction. It could cause overflow when it tries to copy more characters into a limited array.
+
+(2.2)	As the local variable and the return address are all located in the stack, the return address could get changed when the overflow happens. As the return address can be any valid address location in all four sections, the computer could execute the code from the stack and cause problems.
+

@@ -1,0 +1,59 @@
+Bash A
+Yifan Ge
+
+Problem 2.1
+4. mv oops.txt ack/handin.txt
+5. mv ack csci208
+
+Problem 4.1
+--wxrwx--x
+
+Problem 4.3
+chmod 042 Alpha
+The owner doesn't have the permissions even if the group has them.
+
+Problem 5.1
+line 1 in example1.txt changed to line 1-3 in example2.txt
+line 6 and 7 in example2.txt was added after line 3 in example1.txt
+line 9 in example1.txt changed to line 13-14 in example2.txt
+line 41 in example1.txt changed to line 46-48 in example2.txt
+line 48 in example1.txt changed to line 55 in example2.txt
+
+Problem 6.4
+diff example1.txt example2.txt > diffs
+
+1c1,3
+< File permissions can be seen by typing ``ls -l''.
+---
+> This is an excerpt from Lab 0.
+> 
+> File permissions can be seen by typing ``ls -al''.
+3a6,7
+> drwx--x--x    2 cs208  cs           4096 Jan  2 10:27 .
+> drwx------    7 cs208  cs           4096 Dec 29 16:47 ..
+9c13,14
+< The first letter in the file permissions shown by ``ls -l''is the 
+---
+> ("ls -a" shows files beginning with ".")
+> The first letter in the file permissions shown by ``ls -al''is the 
+41c46,48
+< see the directory contents. Write permissions allow someone to add files 
+---
+> see the directory contents. 
+> 
+> Write permissions allow someone to add files 
+48c55
+< the owner can read the list of files in the directory, change
+---
+> the owner can read the list of files in the directory, change *random change*
+
+Problem 7.1
+cat - concatenate files and print on the standard output
+
+Problem 9.1
+alias pp
+which pp
+
+alias pp='a2ps'
+
+

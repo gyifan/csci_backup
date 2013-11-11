@@ -1,0 +1,85 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab #2
+Date: 09/06/2011
+
+Problem1
+$zero: The constant value 0;
+$0-$s7: Saved;
+$t0-$t9: Temporaries;
+$a0-$a3: Arguments;
+$v0-$v1: Values for results and expression evaluation;
+$gp: Global pointer;
+$fp: Frame pointer;
+$sp: Stack pointer;
+$ra: Return address;
+$at: Reserved for the assembler.
+
+Problem2
+addi $s1, $s3, 2:
+	-Instruction: Add immediate; computes the addition of the values stored in the register and a immediate number.
+	-Operands: $s3, 2
+	-Results: $s1,
+
+lw $t6, 4($s0):
+	-Instruction: Load Word
+	-Operands:4
+	-Results:$t6
+
+and $t3, $s1, $s2
+	-Instruction:And bitwise
+	-Operands:$s1, $s2
+	-Results:$t3
+
+sll $t0, $t1, 4
+	-Instruction:Shift left Logical; Shift the value in the register n bits.
+	-Operands:$t1, 4
+	-Results:$t0
+
+ori $s1, $s2, 1
+	-Instruction: Or immediate; Or an immediate value with the value stored in the register
+	-Operands:$s2, 1
+	-Results:$s1
+
+jr $ra
+	-Instruction:Jump Register; Jump to the signed register
+	-Operands:$ra
+	-Results:go to $ra.
+
+sub $v0, $t1, $s2
+	-Instruction:Subtract; Subtract the values in the registers
+	-Operands: $t1, $s2
+	-Results:$v0
+
+beq $t1, $t6, 25
+	-Instruction:Branch on Equal; If the value of the operands are equal branch
+	-Operands:$t6, $t1
+	-Results:go to PC+4+100
+
+Problem3
+65(10) to 8-bit: 
+	65/2= 32 ... 1
+	32/2= 16 ... 0
+	16/2= 8 .... 0
+	8/2 = 4 .... 0
+	4/2 = 2 .... 0
+	2/2 = 1 .... 0
+65(10) = 1 000 001B = 101(8)
+
+10110011B to 8-bit:
+	10 110 011B = 263(8)
+
+95(10) to 8-bit:
+	95/2= 47 ... 1
+	47/2= 23 ... 1
+	23/2= 11 ... 1
+	11/2= 5 .... 1
+	5/2 = 2 .... 1
+	2/2 = 1 .... 0
+95(10) = 1 011 111B = 137(8)
+
+0xBABE to binary
+	0xBABE = 1011 1010 1011 1110B
+
+0755(8) to binary
+	0755(8) = 000 111 101 101B

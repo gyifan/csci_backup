@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="555" key="CommitDialog.weights.0"/>
+	<item value="575" key="RevertDialog.location.x"/>
+	<item value="444" key="CommitDialog.weights.1"/>
+	<item value="1" key="RevertDialog.sortColumn"/>
+	<item value="212" key="RevertDialog.location.y"/>
+	<item value="198" key="RevertDialog.column3"/>
+	<item value="150" key="RevertDialog.column2"/>
+	<item value="150" key="RevertDialog.column1"/>
+	<item value="235" key="CommitDialog.location.y"/>
+	<item value="false" key="CommitDialog.sortReversed"/>
+	<item value="20" key="RevertDialog.column0"/>
+	<item value="675" key="CommitDialog.location.x"/>
+	<item value="540" key="RevertDialog.size.x"/>
+	<item value="473" key="RevertDialog.size.y"/>
+	<item value="1" key="CommitDialog.sortColumn"/>
+	<item value="150" key="CommitDialog.column2"/>
+	<item value="177" key="CommitDialog.column1"/>
+	<item value="600" key="CommitDialog.size.x"/>
+	<item value="211" key="CommitDialog.column3"/>
+	<item value="580" key="CommitDialog.size.y"/>
+	<item value="false" key="RevertDialog.sortReversed"/>
+	<item value="20" key="CommitDialog.column0"/>
+	<section name="NewLocationWizard">
+		<list key="ConfigurationWizardMainPage.STORE_URL_ID">
+			<item value="https://svn.eg.bucknell.edu/csci204/s11/ygg001/p4"/>
+			<item value="https://svn.eg.bucknell.edu/csci204/s11/p3/Awesome"/>
+			<item value="https://svn.eg.bucknell.edu/csci204/s11/p2/Salami"/>
+			<item value="https://svn.eg.bucknell.edu/csci204/s11/ygg001/labs"/>
+			<item value="https://svn.eg.bucknell.edu/csci204/s11/student/labs"/>
+		</list>
+	</section>
+</section>

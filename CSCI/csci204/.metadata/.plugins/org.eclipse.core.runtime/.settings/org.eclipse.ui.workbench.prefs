@@ -1,0 +1,5 @@
+#Thu Jan 27 11:53:50 EST 2011
+RUN_IN_BACKGROUND=true
+eclipse.preferences.version=1
+org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands/>
+ENABLED_DECORATORS=org.eclipse.jdt.ui.override.decorator\:true,org.eclipse.jdt.ui.interface.decorator\:false,org.eclipse.pde.ui.binaryProjectDecorator\:false,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,org.tigris.subversion.subclipse.ui.decorator\:true,

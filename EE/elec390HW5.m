@@ -1,0 +1,44 @@
+% Yifan Ge
+% ELEC 390 - HW#5 Problem 3
+% 2/29/2012
+
+f = 15:1:45;    % Define f is between 15 and 45MHz in 1MHz increments
+ZL = 50 + j*10;  % The load impedance
+Zo = 100;       % The characteristic impedance of original cable
+ZoQ = 142.3;    % The characteristic impedance of quarter-wave section
+c = 3*10^8;     % The speed of light
+wavelength = c./(10^6.*f);   % wavelength of the signal
+B = 2*pi()./wavelength; % Beta
+l1 = 2.88*10/(4*pi()); % Distance to the load in original design
+l2 = l1+10/2; % Distance to the load in further design
+lQ = 10/4; % Quarter wavelength cable
+
+% Input impedance at l1 from the load
+ZQin1 = Zo.*(ZL+j.*Zo.*tan(B.*l1))./(Zo+j.*ZL.*tan(B.*l1)); 
+
+% Input impedance at l2 from the load
+ZQin2 = Zo.*(ZL+j.*Zo.*tan(B.*l2))./(Zo+j.*ZL.*tan(B.*l2));
+
+
+% Input impedance after quarter-wave section in original design
+Zin1 = ZoQ.*(ZQin1+j.*ZoQ.*tan(B.*lQ))./(ZoQ+j.*ZQin1.*tan(B.*lQ));
+
+% Input impedance after quarter-wave section in further design
+Zin2 = ZoQ.*(ZQin2+j.*ZoQ.*tan(B.*lQ))./(ZoQ+j.*ZQin2.*tan(B.*lQ));
+
+% Voltage reflection coefficient in original design
+Gemma1 = (Zin1-Zo)./(Zin1+Zo);
+
+% Voltage reflection coefficient in further design
+Gemma2 = (Zin2-Zo)./(Zin2+Zo);
+
+S1 = (1+abs(Gemma1))./(1-abs(Gemma1)); % VSWR in Original Design
+S2 = (1+abs(Gemma2))./(1-abs(Gemma2)); % VSWR in Further Design
+
+figure (1)
+plot(f,S1,'-',f,S2,'-.')
+legend('Original Design','Further Design')
+title('VSWR vs. frequency')
+xlabel('frequency in MHz')
+ylabel('VSWR')
+grid on

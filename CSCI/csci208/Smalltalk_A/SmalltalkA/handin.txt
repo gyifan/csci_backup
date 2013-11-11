@@ -1,0 +1,25 @@
+Lab3 Smalltalk_A
+2/2/2012
+Yifan Ge
+
+Problem1:
+1. The comparison: num1-receiver >-selector num2-argument
+2. The slection: (num1>num2)-receiver ifTrue:-selector num1-argument ifFalse:-selector num2-argument
+
+Problem2:
+x := LabA new.
+x factorial: 5. 120
+x factorial: 10. 3628800
+
+Problem3:
+x := LabA new.
+y := #(1 2 3 4).
+x sum: y. 10
+
+Problem4:
+x := LabA new.
+x fibonacci: 6. 8
+x fibonacci: 15. 610
+
+
+

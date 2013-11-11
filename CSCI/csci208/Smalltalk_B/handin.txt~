@@ -1,0 +1,16 @@
+Yifan Ge
+CSCI 208
+Lab 4 - Smalltalk_B
+
+Problem 1.
+The Object class implements the perform:with: method.
+
+Problem 2.
+As Float, Fraction, String, and etc. are all subclasses of Object. We should be able to generalize , operator by put it into the printing protocol of the Object class.
+
+Problem 4c.
+The ArrayedCollection class implements the size method. String is stored as an array of characters. The implementation of a String can be described in its parents or grandparents' classes. 
+-3 as an integer will return 1. '-3' as a String will return 2. This is because length method is specified differently in the Integer and String classes.
+
+Problem 4d.
+This imply that all the subclasses will be able to call its super's length method to get the length of the Object.

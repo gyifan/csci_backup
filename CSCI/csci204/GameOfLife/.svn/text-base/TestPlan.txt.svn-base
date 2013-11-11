@@ -1,0 +1,146 @@
+Yifan Ge, Michael Davis
+Test Plan for the Game of Life project:
+
+What is being tested?		What to do?					Expected Results:
+Board size 			Set size to 5 in main	 			Starting 5x5 board in the GUI
+					Set size to 15 in main				Starting 15x15 board in the GUI
+					Set size to 30 	in main				Starting 30x30 board in the GUI
+					Set size to 5 in GUI, hit Reset 	Board becomes 5x5
+					Set size to 15 in GUI, hit Reset 	Board becomes 15x15
+					Set size to 30 in GUI, hit Reset 	Board becomes 30x30
+					Set size to a negative number		Board becomes 5x5
+					set size to a very large number		Board becomes 100X100
+						
+Life probability 	Set probability to 0  						All cells start out dead
+					Set probability to .5 in main 				About half of the cells are alive
+					Set probability to 1 in main 				All cells start out alive
+					Set probability to 0 in GUI, hit Reset 		All cells become dead
+					Set probability to .5 in GUI, hit Reset		About half of the cells are alive
+					Set probability to 1 in GUI, hit Reset		All cells are alive
+					Set probability to A value greater than 1	Probability becomes 1
+					Set probability to a negative				Probability becomes zero
+						
+Generation 			Set generations to 0 in main 					GUI runs 0 generations
+					Set generations to 5 in main					GUI runs 5 generations
+					Set generations to 10 in main					GUI runs 10 generations
+					Set generations to 0 in GUI, hit Reset & Play 	GUI runs 0 generations
+					Set generations to 5 in GUI, hit Reset & Play	GUI runs 5 generations
+					Set generations to 10 in GUI, hit Reset & Play	GUI runs 10 generations
+					Set generations to a negative 					Max generations is set to zero
+						
+Update 				Give a dead middle cell 0 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 1 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 2 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 3 live neighbors, hit Next 	cell becomes alive
+					Give a dead middle cell 4 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 5 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 6 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 7 live neighbors, hit Next 	cell stays dead
+					Give a dead middle cell 8 live neighbors, hit Next  cell stays dead
+					
+					Give a live middle cell 0 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 1 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 2 live neighbors, hit Next 	cell stays alive
+					Give a live middle cell 3 live neighbors, hit Next 	cell stays alive
+					Give a live middle cell 4 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 5 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 6 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 7 live neighbors, hit Next 	cell becomes dead
+					Give a live middle cell 8 live neighbors, hit Next 	cell becomes dead
+					
+					Give a left border dead cell 0 live neighbors, hit Next cell stays dead
+					Give a left border dead cell 1 live neighbors, hit Next cell stays dead
+					Give a left border dead cell 2 live neighbors, hit Next cell stays dead
+					Give a left border dead cell 3 live neighbors, hit Next cell becomes alive
+					Give a left border dead cell 4 live neighbors, hit Next cell stays dead
+					Give a left border dead cell 5 live neighbors, hit Next cell stays dead
+					
+					Give a top border dead cell 0 live neighbors, hit Next cell stays dead
+					Give a top border dead cell 1 live neighbors, hit Next cell stays dead
+					Give a top border dead cell 2 live neighbors, hit Next cell stays dead
+					Give a top border dead cell 3 live neighbors, hit Next cell becomes alive
+					Give a top border dead cell 4 live neighbors, hit Next cell stays dead
+					Give a top border dead cell 5 live neighbors, hit Next cell stays dead
+					
+					Give a right border dead cell 0 live neighbors, hit Next cell stays dead
+					Give a right border dead cell 1 live neighbors, hit Next cell stays dead
+					Give a right border dead cell 2 live neighbors, hit Next cell stays dead
+					Give a right border dead cell 3 live neighbors, hit Next cell becomes alive
+					Give a right border dead cell 4 live neighbors, hit Next cell stays dead
+					Give a right border dead cell 5 live neighbors, hit Next cell stays dead
+					
+					Give a bottom border dead cell 0 live neighbors, hit Next cell stays dead
+					Give a bottom border dead cell 1 live neighbors, hit Next cell stays dead
+					Give a bottom border dead cell 2 live neighbors, hit Next cell stays dead
+					Give a bottom border dead cell 3 live neighbors, hit Next cell becomes alive
+					Give a bottom border dead cell 4 live neighbors, hit Next cell stays dead
+					Give a bottom border dead cell 5 live neighbors, hit Next cell stays dead
+					
+					Give a left border live cell 0 live neighbors, hit Next cell becomes dead
+					Give a left border live cell 1 live neighbors, hit Next cell becomes dead
+					Give a left border live cell 2 live neighbors, hit Next cell stays alive
+					Give a left border live cell 3 live neighbors, hit Next cell stays alive
+					Give a left border live cell 4 live neighbors, hit Next cell becomes dead
+					Give a left border live cell 5 live neighbors, hit Next cell becomes dead
+					
+					Give a right border live cell 0 live neighbors, hit Next cell becomes dead
+					Give a right border live cell 1 live neighbors, hit Next cell becomes dead
+					Give a right border live cell 2 live neighbors, hit Next cell stays alive
+					Give a right border live cell 3 live neighbors, hit Next cell stays alive
+					Give a right border live cell 4 live neighbors, hit Next cell becomes dead
+					Give a right border live cell 5 live neighbors, hit Next cell becomes dead
+					
+					Give a top border live cell 0 live neighbors, hit Next cell becomes dead
+					Give a top border live cell 1 live neighbors, hit Next cell becomes dead
+					Give a top border live cell 2 live neighbors, hit Next cell stays alive
+					Give a top border live cell 3 live neighbors, hit Next cell stays alive
+					Give a top border live cell 4 live neighbors, hit Next cell becomes dead
+					Give a top border live cell 5 live neighbors, hit Next cell becomes dead
+					
+					Give a bottom border live cell 0 live neighbors, hit Next cell becomes dead
+					Give a bottom border live cell 1 live neighbors, hit Next cell becomes dead
+					Give a bottom border live cell 2 live neighbors, hit Next cell stays alive
+					Give a bottom border live cell 3 live neighbors, hit Next cell stays alive
+					Give a bottom border live cell 4 live neighbors, hit Next cell becomes dead
+					Give a bottom border live cell 5 live neighbors, hit Next cell becomes dead
+					
+					Give a top left corner live cell 0 live neighbors, hit Next cell becomes dead
+					Give a top left corner live cell 1 live neighbors, hit Next cell becomes dead
+					Give a top left corner live cell 2 live neighbors, hit Next cell stays alive
+					Give a top left corner live cell 3 live neighbors, hit Next cell stays alive
+					
+					Give a top right corner live cell 0 live neighbors, hit Next cell becomes dead
+					Give a top right corner live cell 1 live neighbors, hit Next cell becomes dead
+					Give a top right corner live cell 2 live neighbors, hit Next cell stays alive
+					Give a top right corner live cell 3 live neighbors, hit Next cell stays alive
+					
+					Give a bottom left corner live cell 0 live neighbors, hit Next cell becomes dead
+					Give a bottom left corner live cell 1 live neighbors, hit Next cell becomes dead
+					Give a bottom left corner live cell 2 live neighbors, hit Next cell stays alive
+					Give a bottom left corner live cell 3 live neighbors, hit Next cell stays alive
+					
+					Give a bottom right corner live cell 0 live neighbors, hit Next cell becomes dead
+					Give a bottom right corner live cell 1 live neighbors, hit Next cell becomes dead
+					Give a bottom right corner live cell 2 live neighbors, hit Next cell stays alive
+					Give a bottom right corner live cell 3 live neighbors, hit Next cell stays alive
+					
+					Give a top left corner dead cell 0 live neighbors, hit Next cell stays dead
+					Give a top left corner dead cell 1 live neighbors, hit Next cell stays dead
+					Give a top left corner dead cell 2 live neighbors, hit Next cell becomes alive
+					Give a top left corner dead cell 3 live neighbors, hit Next cell stays dead
+					
+					Give a top right corner dead cell 0 live neighbors, hit Next cell stays dead
+					Give a top right corner dead cell 1 live neighbors, hit Next cell stays dead
+					Give a top right corner dead cell 2 live neighbors, hit Next cell becomes alive
+					Give a top right corner dead cell 3 live neighbors, hit Next cell stays dead
+					
+					Give a bottom left corner dead cell 0 live neighbors, hit Next cell stays dead
+					Give a bottom left corner dead cell 1 live neighbors, hit Next cell stays dead
+					Give a bottom left corner dead cell 2 live neighbors, hit Next cell becomes alive
+					Give a bottom left corner dead cell 3 live neighbors, hit Next cell stays dead
+					
+					Give a bottom right corner dead cell 0 live neighbors, hit Next cell stays dead
+					Give a bottom right corner dead cell 1 live neighbors, hit Next cell stays dead
+					Give a bottom right corner dead cell 2 live neighbors, hit Next cell becomes alive
+					Give a bottom right corner dead cell 3 live neighbors, hit Next cell stays dead
+					

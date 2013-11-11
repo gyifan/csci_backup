@@ -1,0 +1,7 @@
+INDEX VERSION 1.125+/nfs/unixspace/linux/accounts/student/y/ygg001/csci204/.metadata/.plugins/org.eclipse.jdt.core
+2421421742.index
+4118765929.index
+238286780.index
+2204857908.index
+327272467.index
+1082094795.index

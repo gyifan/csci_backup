@@ -1,0 +1,18 @@
+1.3	9/20
+3,5,6 are incorrect
+
+1.4	19/20
+didn't calculate CPI in 6
+
+1.6	9/20
+Although I gave you full credit for 1, 2, 3, average CPI should be calculated for each program using each compiler. A compiled program has different instructions with different CPI. So when you calculate the CPI for a compiled program, it is already an average.
+4, 5, 6 are incorrect. they should be answered for each program with each processor.
+
+1.14	17/20
+4 is incorrect. MFLOPS = No. FP operations/(execution time * 10^6). Here the execution time refer to the execution time of all the FP operations, not the whole program.
+
+1.15	15/20
+2 is incorrect. It's asking how to reduce total time by 20% only cutting INT time.
+5 for B is incorrect.
+
+Total: 69/100

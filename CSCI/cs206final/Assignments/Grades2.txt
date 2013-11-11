@@ -1,0 +1,34 @@
+2.6
+12/16
+1 b) Think about byte-addressable
+4 combine into single statement, and think about byte-addressable for b)
+6 b) lw opcode is 35 in decimal and 0x23
+
+2.13
+4/24
+1 both incorrect
+2 both incorrect
+3 both incorrect
+4 both incorrect
+5 b) incorrect
+6 b) incorrect
+
+2.14
+18/18
+
+2.17
+15/20
+2 ?
+3 redundant
+6 b) incorrect
+
+2.27
+12/18
+4 a) lui incorrect
+  b) incorrect
+5 incorrect. you can't just load immediate value using lw.
+
+2.30.1
+4/4
+
+65/100

@@ -1,0 +1,61 @@
+This is an excerpt from Lab 0.
+
+File permissions can be seen by typing ``ls -al''.
+
+\begin{verbatim}
+drwx--x--x    2 cs208  cs           4096 Jan  2 10:27 .
+drwx------    7 cs208  cs           4096 Dec 29 16:47 ..
+-rw-rw-rw-    1 cs208    cs          47546 Oct  7 15:35 index.html
+-rwxr-xr-x    1 cs208    cs         114473 Oct  9 12:46 runme
+drwxr-x--x    2 cs208    cs           4096 Nov 25 19:28 solutions
+\end{verbatim}
+
+("ls -a" shows files beginning with ".")
+The first letter in the file permissions shown by ``ls -al''is the 
+file type (file, directory, or link). The rest of the letters are in 
+sets of three for owner, group, and outsider permissions. Ony the owner 
+of a file (and the system administrators) can change its permissions
+In the example files shown above, the owner is ``cs208'' and the group 
+is ``cs''. Some file permissions are shown below and are seperated into 
+type, owner, group, and other.
+
+\begin{verbatim}
+type    owner/user   group   other/outsider   name
+ -      rw-          rw-       rw-            index.html
+\end{verbatim}
+
+The index.html file is readable and writable by absolutely everybody. 
+Nobody, including the owner, can execute it.
+
+\begin{verbatim}
+type    owner/user   group   other/outsider   name
+-       rwx          r-x       r-x            runme
+\end{verbatim}
+
+The runme file is readable and executable by everybody but writable 
+by only the owner.
+
+\begin{verbatim}
+type    owner/user   group   other/outsider   name
+d       rwx          r-x       --x            solutions
+\end{verbatim}
+
+This file is a directory named solutions. Read, write and execute 
+mean slightly different things for files and directories. Read 
+permissions on a directory allow someone to use the ``ls'' command to 
+see the directory contents. 
+
+Write permissions allow someone to add files 
+to the directory. Execute permissions allow someone to ``cd'' into that 
+directory. If you have execute permissions but not read permissions, 
+someone may ``cd'' into the directory but they may not ``ls'' to see 
+the directory contents.
+
+The first ``rwx'' set of the permissions for the solutions file means 
+the owner can read the list of files in the directory, change *random change*
+those files, and go into the directory using ``cd''. The second set of 
+``r-x'' means that anyone in the same group can read the list of files 
+in the directory and go into the directory using ``cd''. The third set 
+of permissions, ``--x'' means outsiders can ``cd'' through the directory 
+and through any sub-directories (if their permissions allow it) but 
+cannot see a list of file names and cannot make any changes to the files.

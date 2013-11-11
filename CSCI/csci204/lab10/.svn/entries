@@ -1,0 +1,67 @@
+8
+
+dir
+21282
+https://svn.eg.bucknell.edu/csci204/s11/ygg001/labs/lab10
+https://svn.eg.bucknell.edu/csci204
+
+
+
+2011-04-14T14:24:44.406713Z
+21282
+ygg001
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4fbfbf4-8a3c-0410-ab9f-d312241629b4
+
+.classpath
+file
+21283
+
+
+
+2011-04-14T14:23:02.000000Z
+cf4ed230d582a3bc32c9302115717058
+2011-04-14T14:25:10.296584Z
+21283
+ygg001
+
+.project
+file
+21283
+
+
+
+2011-04-14T14:20:42.000000Z
+14a3fb1b45c0ff647b5fa473d1eaf1ad
+2011-04-14T14:25:10.296584Z
+21283
+ygg001
+
+readme.txt
+file
+21295
+
+
+
+2011-04-14T16:02:34.000000Z
+bd7e6e4d38b3f843a9f6c93f2e6508f4
+2011-04-14T16:02:53.952137Z
+21295
+ygg001
+
+src
+dir
+

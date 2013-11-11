@@ -1,0 +1,17 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab #1
+Date: 08/30/2011
+
+[Problem 1]:
+
+Answer 1.1:
+
+mkdir:- This command creates the Directory(ies), if they do not already exist.
+The three lines above create three directories. It creates Lab1 directory within Labs directory, which is created in cs206.
+
+Answer 1.2:
+
+cp:- This command copies file or directory to another directory.
+The above line copies the cs206/Labs/Lab1 to local directory cs206/Labs/Lab1.
+

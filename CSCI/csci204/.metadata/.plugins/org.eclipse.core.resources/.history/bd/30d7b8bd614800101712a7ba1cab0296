@@ -1,0 +1,30 @@
+/**
+ * CSCI 204, Yifan Ge, Kevin Thomas, Davis Gallinghouse
+ * Assignment MazeEscapingRobots
+ * Created: Mar 1, 2011, 12:40:28 AM
+ */
+
+/**
+ * This class is a NinjaRobot that inherits from the abstract Robot class. It
+ * has all the same instance data and methods as every other Robot. It
+ * implements the abstract method <code>calculateNext()</code> based on
+ * choosing from three actions: turn right, turn left, and teleporting itself 4 blocks forward.
+ * 
+ * @author Yifan Ge
+ * @author Kevin Thomas
+ * @author Davis Gallinghouse
+ * 
+ */
+public class NinjaRobot extends Robot {
+
+	/*
+	 * (non-Javadoc)
+	 * 
+	 * @see Robot#calculateNext()
+	 */
+	@Override
+	public void calculateNext() {
+
+	}
+
+}

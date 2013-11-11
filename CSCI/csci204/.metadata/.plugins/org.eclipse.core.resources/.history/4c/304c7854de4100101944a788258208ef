@@ -1,0 +1,48 @@
+/**
+ * CSCI 204, Yifan Ge, Kevin Thomas, Davis Gallinghouse
+ * Assignment MazeEscapingRobots
+ */
+ 
+ ___________              __    __________.__                 
+\__    ___/___   _______/  |_  \______   \  | _____    ____  
+  |    |_/ __ \ /  ___/\   __\  |     ___/  | \__  \  /    \ 
+  |    |\  ___/ \___ \  |  |    |    |   |  |__/ __ \|   |  \
+  |____| \___  >____  > |__|    |____|   |____(____  /___|  /
+             \/     \/                             \/     \/ 
+ 
+ MAZE:
+ 
+ Try loading every maze.  Make sure they all load.
+ 
+ ROBOT:
+ 
+ Try loading every robot.  Make sure they all load.
+
+ RANDOM ROBOT:
+ 
+ Make sure the movement of the robot is not systematic in any way.
+ 
+ Wall in front, facing up
+ *     *           *
+ ^ --> < (left) or > (right)
+
+ No wall in front, facing left
+ <   --> forward step or ^(right) or v(left)
+ 
+ RIGHT-HAND ROBOT:
+ 
+ In a hallway where the only openings are to the left and behind us,
+ the right hand robot will turn left.
+ 
+ ***       ***
+  ^*  -->   <*
+ * *       * *
+ 
+ After taking a step forward, with no wall on the right hand side,
+ the right hand robot will turn right and then step forward.
+ 
+ *         *^        *>       * >      *  >      *  v      *
+  ^*  -->    *  -->    *  -->   *  -->   *   -->   *    -->   *v
+ ***       ***       ***      ***      ***       ***        ***
+
+ 

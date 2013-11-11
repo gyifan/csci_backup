@@ -1,0 +1,53 @@
+Yifan Ge
+CSCI 208 Homework 4
+4/2/2012
+
+Question 1:
+In java, everything is passed by (value). Because Objects are actually references to heap memory, it appears as if they are passed by (reference).
+
+Question 2:
+(a)
+#include<iostream>
+using namespace std;
+void foo(int* x) {x=2;}
+
+int main() {
+    int a = 5;
+    int* z = &a;
+    foo(z);
+    cout << z << endl;
+}
+
+(b)
+#include<iostream>
+using namespace std;
+void foo(int* x) {x=2;}
+
+int main() {
+    int z = 5;
+    foo(&z);
+    cout << z << endl;
+}
+
+Question 3:
+(a)
+4
+3
+36
+
+(b)
+3
+4
+4
+36
+
+(c)
+This is because the evaluation strategies are different. 
+So the evaluation order are different.
+
+Question 4:
+It's possible to pass an int by reference in Java.
+We can use Int object to pass an int as reference in Java.
+
+Question 5:
+

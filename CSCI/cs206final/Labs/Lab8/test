@@ -1,0 +1,53 @@
+	.data
+	.align 2
+points:
+	.word 0 # x-coordinate of first point
+ 	.word 0 # y-coordinate of first point
+ 	.word 3 # x-coordinate of second point
+ 	.word 8 # y-coordinate of second point
+ 	.word 5 # x-coordinate of third point
+ 	.word 9 # y-coordinate of third point
+ 	
+ directory: 
+ 	.word # 1st 4 chars of name for directory[0]
+ 	.word # 2nd 4 chars of name
+ 	.word # 3rd 4 chars of name
+ 	.float freq
+ 	.word # 1st 4 chars of name for directory[1]
+ 	.word # 2nd 4 chars of name
+ 	.word # 3rd 4 chars of name
+ 	.float freq
+ 	
+ 	.text
+ 	
+main:
+	# points[2][0] = points[1][1]
+	
+	la	$s0, points	# load base address
+	li	$t0, 8		# size of each point = 8 bytes
+	li	$t1, 1		# i = 1
+	li	$t2, 4		# coordinate (y)
+	multu	$t0, $t1	# calculate offset
+	mflo	$t3		# i offset 
+	add	$t3, $t3, $t2	# address offest
+	add	$t3, $t3, $s0	# address
+	lw	$s1, 0($t3)	# load the value
+	
+	la	$s0, points	# load base address
+	li	$t0, 8		# size of each point = 8 bytes
+	li	$t1, 2		# i = 2
+	li	$t2, 0		# coordinate (x)
+	multu	$t0, $t1	# calculate offset
+	mflo	$t3		# i offset 
+	add	$t3, $t3, $t2	# address offest
+	add	$t3, $t3, $s0	# address
+	sw	$s1, 0($t3)	# load the value
+
+	la	$s0, directory	# load base address
+	li	$t0, 16		# size of each elemet
+	li	$t1, 4		# i = 4
+	multu	$t0, $t1	# calculate offset
+	mflo	$t2		# i offset
+	addi	$t2, $t2, 12	# address offset
+	add	$t2, $s0, $t2	# address of directory[4].freq
+	lw	$f0, 0($t2)	# load the value

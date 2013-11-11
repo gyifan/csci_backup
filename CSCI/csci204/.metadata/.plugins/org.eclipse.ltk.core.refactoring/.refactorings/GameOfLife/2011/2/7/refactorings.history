@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;length&apos; in &apos;GameOfLifeBoard.addHorizontalGridLine(...)&apos; to &apos;numOfCell&apos;&#x0A;- Original project: &apos;GameOfLife&apos;&#x0A;- Original element: &apos;GameOfLifeBoard.addHorizontalGridLine(int).length&apos;&#x0A;- Renamed element: &apos;length&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;length&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{GameOfLifeBoard.java[GameOfLifeBoard~addHorizontalGridLine~I@length!7200!7209!7204!7209!I" name="numOfCell" references="true" stamp="1297051553556" version="1.0"/>
+</session>

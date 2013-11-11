@@ -1,0 +1,26 @@
+8  -- Set PC to 8.  Lab 1, try with inputs 5, 7, and 9. --
+8       480     Inc 80
+9       480     Inc 80
+10      930     Blank screen 
+11	960	Input		Get and display 1-digit
+12	180	store 80
+13	960	Input		Get and display 1-digit
+14	181	Store 81
+15	960	Input		Get and display 1-digit
+16	182	Store 82
+
+17	281	Add 81		Adding...
+18	280	Add 80		What did we just add?
+19	140	Store 40 	Store results
+
+20	940	Shift left	Recognize what the shifting does??
+21	940	Shift left
+22	950	Shift right
+23	950	Shift right
+24	186	Store 86
+
+25	040	Load 40		What did we load?
+26	950	Shift right	What does this shifting do?
+27	185	Store 85
+
+28	920	Halt            Overall, what did this program do?

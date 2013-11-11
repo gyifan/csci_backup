@@ -1,0 +1,42 @@
+#!/bin/bash
+
+echo "Hello Bash!" 
+
+echo "Hello Bash!" >> output.txt
+
+# need 4 arguments from the command line. 2 need to be numbers, 2 need to be files or folders.
+
+x=${1} # number
+y=${2} # number
+z=${3} # file
+q=${4} # file
+
+echo "${2}"
+
+if [[ ${x} > ${y} ]]; then
+	echo "x is greater than y"
+else
+	if [[ ${x} < ${y} ]]; then
+		echo "y is greater than x"
+	else 
+		echo "x is equal to y"
+	fi
+fi
+
+if [[ -e ${z} ]]; then
+	echo "${z} exits"
+else
+	echo "${z} doesn't exit"
+fi
+
+if [[ -e ${q} ]]; then
+	echo "${q} exits"
+else
+	echo "${q} doesn't exit"
+fi
+
+for file in *.txt; do
+	echo ${file}
+done
+
+exit

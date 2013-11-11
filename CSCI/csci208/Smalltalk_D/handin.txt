@@ -1,0 +1,7 @@
+Yifan Ge
+CSCI 208 - SmallTalk_D
+3/1/2012
+
+The relective capabilities of Smalltalk does not work well because that 
+after fileOut and fileIn, the methods will change back to their original defined
+stage. So the program didn't actually permitely change the methods.  

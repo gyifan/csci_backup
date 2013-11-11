@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Name=Eclipse IDE 3.4.2
+Comment=Eclipse Integrated Development Environment
+Exec=/usr/bin/eclipse3.4
+Icon=/usr/share/pixmaps/eclipse3.4.xpm
+Terminal=false
+Type=Application
+Categories=Application;Development;X-Red-Hat-Base;
+X-Desktop-File-Install-Version=0.10

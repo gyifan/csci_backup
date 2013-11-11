@@ -1,0 +1,7 @@
+Author: Yifan Ge, Michael Davis
+
+Extra Credit Description: 
+1. 	Added "previous" button to the GUI, which allows the user to go back to 
+	previous generation.
+2.	Added birth conditions and stay alive condition fields.
+3.	Added drop box to select game variants.

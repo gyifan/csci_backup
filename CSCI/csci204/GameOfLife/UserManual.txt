@@ -1,0 +1,200 @@
+
+The Game of Life:  User Manual
+Authors:  Yifan Ge, Michael Davis
+
+
+
+The Game of Life has been tested and runs on the Linux operating system.
+
+
+
+
+Overview:
+	1. Opening The Game of Life in Eclipse
+	2. How to use the program
+		-General Functionality
+		-Button Description
+		-Data Fields
+		-Game Variants
+	3. Quitting the program
+		
+	
+	
+	
+********************************************************************************
+================================================================================
+********************************************************************************
+
+Section 1: Opening The Game of Life in Eclipse
+********************************************************************************
+
+	1)Import GameOfLife project into Eclipse.
+		First open Eclipse and select 'File->Import...'.  In the import window 
+		expand the 'General' folder, select 'Existing Projects into Workspace' 
+		and click the 'Next' button. In the next window click on 'Browse...' in
+		the upper right corner and locate your copy of the 'GameOfLife' folder.
+		Now click on 'Finish'.
+		
+	2)Select the project  
+		Select the GameOfLife project in the Package explorer on the left side 
+		of the screen. If you cannot see the Package explorer, in the top bar, 
+		click on 'Window-> Show View-> Package Explorer'.
+		
+	3)Run the program
+		To Run the GameOfLife, in the top bar, click on 'Run-> Run'. If asked 
+		how to run the program, select 'Java Application' and continue.
+	
+********************************************************************************
+	
+Section 2: How to use the program
+********************************************************************************
+--------------------------------------------------------------------------------
+GENERAL FUNCTIONALITY
+--------------------------------------------------------------------------------
+
+	1)Making Cells alive/dead
+		By clicking on any 'cell' on the board at ANY time will change the 
+		current state of the clicked 'cell'.
+		
+	2)Selecting a game variant
+		By using the drop-down menu above the previous button the user can 
+		select a variant of the Game of Life. To select a variant, click the 
+		arrow on the right side of the box and click on a version of the Game of
+		Life that appears. See VARIANTS for further description of each option.
+		
+--------------------------------------------------------------------------------
+BUTTON DESCRIPTIONS
+--------------------------------------------------------------------------------
+
+	1)Reset button
+		The Reset button must be clicked to update any changes made to: Board 
+		Size, Prob of Life, Max Generations. This button will also set the 
+		Current Generation to zero.
+		
+	2)Play/Stop button
+		Clicking on the Play button will begin the simulation.  This will 
+		increment the Current Generation field for every time the board is 
+		updated.  Once the play button is clicked it becomes the Stop button. 
+		Clicking the Stop button will halt the simulation. 
+		
+	3)Next button
+		The Next button allows the user to manually increment the Current 
+		Generation of the simulation. This option is not available while the 
+		board is in play mode.
+		
+	4)Previous button
+		the Previous button allows the user to manually return the board to the 
+		previous state. This option is not available in play mode.
+	
+	5)Print button
+		The Print button displays a representation of the board using ASCII 
+		characters in the Eclipse console. 'X's represent dead cells and 'O's 
+		represent living cells.
+		
+--------------------------------------------------------------------------------
+DATA FIELDS	
+--------------------------------------------------------------------------------
+	All the editable fields are updated upon Reset.
+	
+	1)Setting the Board Size
+		The Board Size field is expecting a positive integer between 5 and 50. 
+		This value represents the number of 'cells' per side of the board. This 
+		value is updated upon clicking the Reset button.
+		
+	2)Setting Probability of Life
+		The prob of life is expecting a positive decimal between zero and one 
+		representing the chance that a particular cell will be alive upon 
+		clicking the 'Reset' button. If probability of life is zero, upon 
+		clicking reset all cells will be set to 'dead'. If the prob of life is 
+		one then all cells will be initialized to alive.
+		
+	3)Setting Maximum Generations
+		Maximum Generations represents the number of times the program will 
+		update the board in the simulation. This value is updated upon clicking 
+		the Reset Button.
+	
+	4)Current Generations
+		This field indicates the number of times that the simulation has updated 
+		the cells on the board.
+		
+	5) Birth Conditions
+		When the 'Custom' game variant is selected this field allows the user to 
+		enter specific conditions for a cell to be born. The expected entry 
+		format is a list of integers separated by commas. Note that these 
+		numbers represent the amount of neighbors for which a cell will be born.
+		Example, if cells should be born if one, three, or five neighbors are 
+		present then the following should be entered into the Birth Condition
+		field: 1,3,5   Remember that the minimum number of neighbors is 0, and 
+		max number of neighbors is 8. This field can be left blank to declare 
+		that cells will never be born.
+		
+	6) Stay Conditions
+		When the 'Custom' game variant is selected this field allows the user to 
+		enter specific conditions for a cell to remain alive. The expected entry 
+		format is a list of integers separated by commas. Note that these 
+		numbers represent the amount of neighbors for which a cell will remain 
+		alive.Example, if cells should remain if zero, two, or six neighbors are 
+		present then the following should be entered into the Stay Condition
+		field: 0,2,6   Remember that the minimum number of neighbors is zero, 
+		and max number of neighbors is 8. The field can be left blank to declare
+		that a cell will never stay alive after a round.
+--------------------------------------------------------------------------------		
+GAME VARIANTS
+--------------------------------------------------------------------------------
+	1)Custom
+		This variant enables the Birth and Stay Condition fields, allowing the
+		user to create custom game variants.(See Birth and Stay Condition fields
+		description for more information.)  
+	2)Conway's
+		This variant follows the rule set where a cell is born if it has 3 
+		neighbors and survives if it has 2 or 3 neighbors, any other number of
+		neighbors results in a dead cell.
+	3)Highlife
+		This variant follows the rule set where a cell is born if it has 3 or 6
+		neighbors and survives if it has 2 or 3 neighbors, any other number of 
+		neighbors results in a dead cell.
+	4)Seeds
+		This variant follows the rule set where a cell is born if it has 2 
+		neighbors and a cell will never stay alive since the stay alive field is
+		blank for this variant.
+	5)Day & Night
+		This variant allows a cell to be born if 3,6,7, or 8 neighbors are 
+		present. A cell will survive a round if 3,4,6,7, or 8 neighbors are 
+		present.
+			
+	6)Replicator
+		This variant allows a cell to be born if 1,3,5, or 7 neighbors are 
+		present. A cell will survive a round if 1,3,5, or 7 neighbors are 
+		present.
+	
+	7)Serviettes
+		This variant allows a cell to be born if 2,3,4 neighbors are 
+		present. A cell will never survive a round.
+		
+	8)Life No Death
+		This variant allows a cell to be born if 3 neighbors are 
+		present. A cell will survive a round if 0,1,2,3,4,5,6,7, or 8 neighbors
+		are present.
+		
+	9)Walled Cities
+		This variant allows a cell to be born if 4,5,6,7, or 8 neighbors are 
+		present. A cell will survive a round if 2,3,4, or 5 neighbors are 
+		present.
+		
+	10)Diamoeba
+		This variant allows a cell to be born if 3,5,6,7, or 8 neighbors are 
+		present. A cell will survive a round if 5,6,7, or 8 neighbors are 
+		present.
+			
+********************************************************************************		
+
+Section 3: Quitting the Program
+********************************************************************************
+
+	1)Quitting the Game of Life simulation
+		In the top right corner of the window there will be a small button with 
+		an 'x'. Click this button to close the window.
+		
+	2)Quitting Eclipse
+		In the top right corner of the window there will be a small button with 
+		an 'x'. Click this button to close the window.

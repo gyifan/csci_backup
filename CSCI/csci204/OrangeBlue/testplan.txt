@@ -1,0 +1,92 @@
+**
+ * CSCI 204, Yifan Ge
+ * Assignment OrangeBlue
+ * 03/30/2011
+ *
+ * Purpose: Test plan for the orange blue game
+ */
+================================================================================
+
+Starting the game:
+
+1. The program has to load default empty board, zeros for scores, default first 
+   player (blue) and empty box for Announcements.
+   
+Playing the game:
+
+1. By clicking on an empty box, the box has to be filled by a dot with the
+   current move color and the current play's score increments. After that, the 
+   current player changed to the other color.
+
+2. By clicking on an occupied box, nothing changes, except the announcement box 
+   displays "Occupied".
+   
+3. After adding the color A dot at one end, if it creates two A color dot 
+   surrounds N color B dots in a straight line, all color B dot in between color
+   A dots flip the color to color A. The color A score increases by N+1 and the 
+   color B score decreases by N.
+   
+   A represents color A dot, B represents color B dot. Space represents empty
+   box.
+   
+   a. Horizontal:
+   
+      ABBBBB --> ABBBBBA --> AAAAAAA (Score A + 6, Score B - 5)
+      
+      BBBBBA --> ABBBBBA --> AAAAAAA (Score A + 6, Score B - 5)
+   
+   b. Vertical:
+      A     A     A
+      B     B     A
+      B --> B --> A (Score A + 5, Score B - 4)
+      B     B     A
+      B     B     A
+            A     A
+     
+            A     A
+      B     B     A
+      B --> B --> A (Score A + 5, Score B - 4)
+      B     B     A
+      B     B     A
+      A     A     A
+            
+   c. Diagonal (Top left to bottom right):
+      A         A         A
+       B         B         A
+        B   -->   B   -->   A   (Score A + 4, Score B - 3)
+         B         B         A
+                    A         A
+     
+                A         A
+       B         B         A
+        B   -->   B   -->   A   (Score A + 4, Score B - 3)
+         B         B         A
+          A         A         A
+          
+   d. Diagonal (Top right to bottom left):
+         A        A        A
+        B  -->   B  -->   A  (Score A + 3, Score B - 3)
+       B        B        A
+               A        A
+               
+                   A        A
+         B  -->   B  -->   A  (Score A + 3, Score B - 3)
+        B        B        A
+       A        A        A
+       
+   (All the numbers can be changed to any other integer within the limit)
+   
+4. The previous test has to happen simultaneously in all directions.
+
+5. Only the newly added dot has the effect described in test 3. The flipped dots
+   cannot initiate other flips.
+   
+6. The scores for each color have to be the same as the numbers of each
+   corresponding colored dot on the board.
+
+Ending the game:
+
+1. After the board is full, the announcement box displays the winner.
+
+2. By click on the reset button, the board will be cleared, the scores are
+   zeroed, and the current move color is set to default color blue.

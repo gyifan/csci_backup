@@ -1,0 +1,61 @@
+Yifan Ge
+CSCI 208 Homework 6
+4/29/2012
+
+Problem 1
+a) expr ::- expr '!' term | term    % left associativity
+b) expr ::- expr '&' expr | term    % ambiguous associativity
+c) expr ::- term '%' expr | term    % right associativity
+
+Problem 2
+parenthesis > '&' > '!'=='$' > '@' > '%'
+
+Problem 3
+exp1 ::- exp1 '%' exp2 | exp1 '$' exp2 | exp2
+exp2 ::- exp2 '&' exp3 | exp3
+exp3 ::- exp4 '#' exp3 | exp4 '@' exp3 | exp4
+exp4 ::- '(' exp1 ')' | NUMBER
+
+Problem 4
+right associativity
+
+Problem 5
+                       exp1
+                       exp2
+        ---------------exp3---------------
+  -----exp3-----         !              exp4
+ exp3   !     exp4                      exp5
+ exp4         exp5                       9 
+ exp5          2                         
+  7
+
+Problem 6
+@ > !
+
+Problem 7
+  -------------exp1--------------
+ exp1           %              exp2
+ exp2                          exp3
+ exp3                     -----exp4-----
+ exp4                    exp4   &     exp5
+ exp5                    exp5          3
+  7                       8
+
+Problem 8
+                                stmt-list
+                                  stmt
+  -------------------------------if-stmt------------------------------------------------------------------------------------------------------------------------------------------------
+  |   |           |            |   |                                                           |                                                      |                |                |
+ if  '('   ------exp------    ')' THEN                                                        stmt                                                   ELSE             stmt            ENDIF 
+           |      |      |               ---------------------------------------------------if-stmt-----------------------------------------------          --------ret-stmt-----       
+          exp2  relop   exp2             |                  |                |   |              |                |                   |           |        RETURN       exp      ';'
+          term    |     term            if '('   ----------exp----------    ')' THEN           stmt             ELSE                stmt       ENDIF                   exp2
+         factor   |    factor                    |              |      |               ------ret-stmt------               ------comp-stmt------                   -----term----------
+           x     '>'      2                -----exp2-----     relop   exp2           RETURN     exp       ';'            stmt               stmtlist            term        mulop  factor
+                                          exp2  addop  term     |     term                      exp2                 -assign-stmt-            stmt         ----factor--      '*'     x
+                                          term    |   factor    |    factor                -----term----             z '=' exp ';'          -ret-stmt-    '('   exp   ')' 
+                                         factor   |     |       |       |                term  mulop factor            ----exp2----         RETURN ';'     -----exp2-----
+                                           y     '+'    6      '=='     6               factor   |     |             exp2 addop  term                     exp2  addop  term
+                                                                                          3      *     y             term   |   factor                    term    |   factor
+                                                                                                                    factor  |     |                      factor   |     |
+                                                                                                                      y    '+'    2                         8    '+'    4

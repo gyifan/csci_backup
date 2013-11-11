@@ -1,0 +1,52 @@
+8
+
+dir
+21701
+https://svn.eg.bucknell.edu/csci204/s11/Class/Class%20Examples/src/Lists
+https://svn.eg.bucknell.edu/csci204
+
+
+
+2011-04-04T14:36:05.753547Z
+21010
+lwittie
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4fbfbf4-8a3c-0410-ab9f-d312241629b4
+
+LinkedList.java
+file
+
+
+
+
+2011-04-13T15:12:08.000000Z
+72cc71db646d945f3bfc4775ac9bf33a
+2011-04-04T14:36:05.753547Z
+21010
+lwittie
+
+LinkedListTest.java
+file
+
+
+
+
+2011-04-13T15:12:08.000000Z
+65048149ddccaadcbd8180eb36421d71
+2011-04-04T14:36:05.753547Z
+21010
+lwittie
+

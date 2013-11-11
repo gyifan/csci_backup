@@ -1,0 +1,248 @@
+/**
+ * CSCI 204, Yifan Ge, Kevin Thomas, Davis Gallinghouse
+ * Assignment MazeEscapingRobots
+ */
+ 
+ ___________              __    __________.__                 
+\__    ___/___   _______/  |_  \______   \  | _____    ____  
+  |    |_/ __ \ /  ___/\   __\  |     ___/  | \__  \  /    \ 
+  |    |\  ___/ \___ \  |  |    |    |   |  |__/ __ \|   |  \
+  |____| \___  >____  > |__|    |____|   |____(____  /___|  /
+             \/     \/                             \/     \/ 
+ 
+ MAZE:
+ 
+ Try loading every maze.  Make sure they all load.
+ 
+ ROBOT:
+ 
+ 1. Loads each robot successfully.
+ 
+ 2. After loading the robot, the robot must be placed at the starting point in 
+ 	the maze and is not facing to a wall.
+ 	***		***
+ 	*S	-->	*>
+ 	***		***
+ 
+ 3. After the robot successfully escapes the maze, there will be a new window 
+ 	showing how many steps that robot has taken to get out the maze.
+ 	***	
+ 	 v	-->	A new window with total step information will open
+ 	*E*
+ 	
+ 4. If the robot has moved more then MAXIMUM MOVES, there will be a new window
+ 	indicating that the robot is hopelessly lost.
+
+ RANDOM ROBOT:
+ 
+ Make sure the movement of the robot is not systematic in any way.
+ 
+ 1. Wall in front, facing north
+ 	*     		*           *
+ 	^ 	--> 	< (left) or > (right)
+ 
+ 2. Wall in front, facing south
+ 	v 	--> 	> (left) or < (right)
+ 	*     		*           *
+ 
+ 3. Wall in front, facing west
+ 	*< --> 		*v (left) or *^ (right)
+ 
+ 4. Wall in front, facing east
+ 	>* --> 		*v (left) or *^ (right)
+ 
+ 5. No wall in front, facing north
+ 	^   --> 	forward step or <(left) or >(right)
+ 
+ 6. No wall in front, facing south
+ 	v   --> 	forward step or >(left) or <(right)
+ 
+ 7. No wall in front, facing west
+ 	<   --> 	forward step or v(left) or ^(right)
+ 
+ 8. No wall in front, facing east
+ 	>   --> 	forward step or ^(left) or v(right)
+ 
+ RIGHT-HAND ROBOT: 
+ 	
+    The right hand robot will always tries to keep his right hand on the wall.
+ 	
+ 1. After taking a step forward, with no wall on the right hand side, the right 
+    hand robot will first turn right and take a step forward to keep its right
+    hand on the wall.
+ 
+             ^        >         >         >         v      
+    ^*  -->   *  -->   *  -->   *  -->   *   -->   *    -->   *v
+     *        *        *        *        *         *          *
+ 	 
+ 2. After the first test, if there is still no wall on the right, the right 
+    hand robot will take steps forward until get blocked by a wall and then 
+    turn left to keep its right hand on the wall.
+ 	
+           *     ^       *     >       *                >*            ^*
+    ^        -->           -->           ------>           -->
+
+ 3. If the robot got blocked by a wall in the hallway, the right hand robot
+    will always turn left and keep the right hand on the wall.
+ 	
+     **        **
+     ^*  -->   <*
+      *         *
+ 	
+ 	
+ 5. If there is opening in the front and wall on the right, the robot will take
+    a step forward,regardless of its left side.
+ 	
+     *        *       ^*
+     *  -->  ^*  -->   *
+    ^*        *        *
+ 	
+ MEMORY ROBOT:
+ 
+    The memory robot will tries not to go through the same pass twice.
+ 	
+ 1. When the memory robot is in a single hall way with walls on its right and 
+    left, it will take a step forward without changing direction.
+ 	
+    * *       * *       *^*
+    * *  -->  *^*  -->  * *
+    *^*       * *       * *
+ 	
+ 2. When the memory robot is in a multi-way intersection with one direction
+    has the lowest visit count, the memory robot will turn and take one step 
+    forward to the location with least visited counts.
+ 
+    (L --> location with the lowest visit count; H --> locations with higher 
+    visit counts. These letters do not exist in actual maze.)
+ 	
+    a.  Three-way intersection (Lowest on the left):
+ 	
+        *H*       *H*       *H*
+        L^*  -->  L<*  -->  < *
+        *H*       *H*	    *H*
+ 		
+    b.  Three-way intersection (Lowest on the right):
+ 		
+        *H*       *H*       *H*
+        *^L  -->  *>L  -->  * >
+        *H*       *H*       *H*
+ 		
+    c.  Three-way intersection (Lowest in the front):
+ 		
+        *L*       *^*        *L*       *^*
+        H^*  -->  H *   or   *^H  -->  * H
+        *H*       *H*        *H*       *H*
+ 		
+    d.  Three-way intersection (Lowest at the back):
+ 		
+        *H*       *H*       *H*       *H*		
+        H^*  -->  H>*  -->  Hv*  -->  H *    or	
+        *L*       *L*       *L*       *v*	
+ 		
+        *H*       *H*       *H*       *H*		
+        *^H  -->  *>H  -->  *vH  -->  * H	
+        *L*       *L*       *L*       *v*
+ 		
+    e.  Four-way intersection (Lowest on the left):
+ 	
+        *H*       *H*       *H*
+        L^H  -->  L<H  -->  < H
+        *H*       *H*       *H*
+ 	
+    f.  Four-way intersection (Lowest on the right):
+ 	
+        *H*       *H*       *H*
+        H^L  -->  H>L  -->  H >
+        *H*       *H*       *H*
+ 		
+    g.  Four-way intersection (Lowest in the front):
+ 	
+        *L*       *^*
+        H^H  -->  H H
+        *H*       *H*
+ 		
+    h.  Four-way intersection (Lowest at the back):
+ 	
+        *H*       *H*       *H*       *H*
+        H^H  -->  H>H  -->  HvH  -->  H H
+        *L*       *L*       *L*       *v*
+ 	
+ 3. When the memory robot is in a multi-way intersection with two or more 
+    directions have the lowest visit count, the memory robot will choose the
+    direction among these directions in following order: front, left, right,
+    back.
+ 	
+    a.  Three-way intersection (Existing the lowest in the front and 
+        Left/right/back):
+ 		
+        *L*       *^*        *L*       *^*       *L*       *^*
+        L^*  -->  L *   or   *^L  -->  * L   or  H^*  -->  H *
+        *H*       *H*        *H*       *H*       *L*       *L*
+ 		
+    b.  Three-way intersection (Lowest on the right and at the back):
+ 		
+        *H*       *H*       *H*
+        *^L  -->  *>L  -->  * >
+        *L*       *L*       *L*
+ 	
+    c.  Three-way intersection (Lowest on the left and at the back):
+ 	
+        *H*       *H*       *H*
+        L^*  -->  L<*  -->  < *
+        *L*       *L*       *L*
+ 		
+ 		
+    d.  Three-way intersection (All have the same visit count):
+ 		
+        *L*       *^*       *L*       *^*		
+        L^*  -->  L *  or   *^L  -->  * L
+        *L*       *L*       *L*       *L*	
+ 		
+    e.  Four-way intersection (Existing Lowest in the front):
+ 	
+        *L*       *^*
+         ^   -->     
+        * *       * *
+ 		
+    f.  Four-way intersection (Existing Lowest on the right and the front is
+        higher):
+ 	
+        *H*       *H*       *H*
+         ^L  -->   >L  -->    >
+        * *       * *       * *
+ 	
+    g.  Four-way intersection (Lowest on the left and the front&right are 
+        higher):
+ 	
+        *H*       *H*       *H*
+        L^H  -->  L<H  -->  < H
+        * *       * *       * *
+ 
+    h.  Four-way intersection (All have the same count):
+ 	
+        *H*       *^*
+        H^H  -->  H H
+        *H*       *H*
+ 		
+ 4. If the memory robot encounter a wall in the front and existing an opening
+    on either left or right, it will turn to that opening.
+ 
+     ***        ***        ***       ***
+      ^*  -->    <*    or  *^   -->  *>
+     * *        * *        * *       * *
+ 	 
+ 5. If the memory robot encounter a wall in the front and existing openings on
+    both left and right, it will turn to the opening with the lowest visit
+    count.
+ 	
+     ***        ***         ***       ***
+     L^H  -->   L<H    or   H^L  -->  H>L
+     * *        * *         * *       * *
+ 	 
+ 6. If the memory robot encounter a wall in the front and existing openings on
+    both left and right with the same visit count, it will turn to right.
+ 	
+     ***       ***
+     H^H  -->  H>H
+     * *       * *
+ 	

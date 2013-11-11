@@ -1,0 +1,19 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Pre-Lab5
+Date: 09/25/2011
+
+Q1:
+   In over1, there was a segment fault. In over2, there was only parts of the sentence was displayed. The cause of this was that too many characters were enter. It exceeded the available space for the string, which only has 10 char. In both programs, there is a condition branch. If the over flow happens they both print out error message.
+
+Q2:
+   In over1, we used gets function. In over2, we used fgets function. We can specify how many character we need to read by using fgets. However, gets just reads everything. That's why over2 didn't show the error message as we set it can only read the first 10 characters.
+
+Q3:
+   In over3, if we have no space in the sentence, the sentence may cause a overflow when it is over 10 characters. This is because scanf %s reads the string before a blank space.
+
+Q4:
+   In over4.c, it changed %s to %10s, which specify that it will only read 10 characters from the input. When we have a system or library function call, it is better to be clear about how much data we want. Always specify the amount when we use the functions. Otherwise, unexpected input may cause a fault.
+
+Q5:
+   The lesson is that always be clear on how much data can be read from the input. This will avoid unexpected input from crash the program.

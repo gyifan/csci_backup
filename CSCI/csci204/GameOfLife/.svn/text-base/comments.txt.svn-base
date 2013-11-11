@@ -1,0 +1,30 @@
+*****Phase 1*****
+
+Problem Statement: 2/2
+
+Description: 2/2
+
+Javadoc: 7.75/10
+-.25 * 9 = -2.25:Your method descriptions should say what methods are called
+		GameOfLife.getBoardSize()
+		GameOfLife.getGameBoard()
+		GameOfLife.reinitialize()
+		GameOfLife.setGameBoard()
+		GameOfLife.updateBoard()
+		GameOfLifeBoard.changeState()
+		GameOfLifeBoard.update()
+		GameOfLifeBoard.getNeighbors()
+		GameOfLifeCell.setNeighbors()
+		
+State of the code: 6/6
+
+Test Plan: 10/10
+
+Overall style, presentation, clarity: 5/5
+
+General Comments
+-----------------
+Your copy constructor for the GameOfLifeCell class is missing the nextLife variable
+
+Total: 32.75/35
+Graded by: BR

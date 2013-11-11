@@ -1,0 +1,26 @@
+Yifan Ge
+Lab 2 - Bash_B 
+1/26/2012
+
+Problem 2.1
+tar cjvf cs206.tbz cs206
+rm -r cs206
+tar xjvf cs206.tbz
+
+./myScript 2 3 output.txt b >> handin.txt
+Hello Bash!
+3
+y is greater than x
+output.txt exits
+b doesn't exit
+handin.txt
+output.txt
+
+./myScript 99 53 handin.txt input.txt >> handin.txt
+Hello Bash!
+53
+x is greater than y
+handin.txt exits
+input.txt doesn't exit
+handin.txt
+output.txt

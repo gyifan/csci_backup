@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/proj6-ygg001/src/CalendarTranslater.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.debug.ui.ATTR_CAPTURE_IN_FILE" value="${workspace_loc:/proj6-ygg001}/Project6.html"/>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="CalendarTranslater"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="Project6.ics"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="proj6-ygg001"/>
+</launchConfiguration>

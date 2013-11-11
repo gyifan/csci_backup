@@ -1,0 +1,26 @@
+Yifan Ge
+CSCI 208
+Lab5 - Smalltalk_C
+
+Problem 1
+1). aNumber
+2). quoRem
+3). digit mask
+4). numerator denominator
+5). E Epsilon
+6). VariableName is a class variable; variableName is a instance variable
+
+Problem 3a
+CrabApple instance share the class variables with all Apple instance. They share the same copy of the instances.
+
+Problem 3b
+brown
+brown
+
+It's the same as the Smalltalk
+
+Problem 4a
+Java is dynamic binding by default.
+
+Problem 4b
+C++ has dynamic as default.

@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+/**
+ * CSCI 204, Yifan Ge
+ * Assiangment lab04
+ * Created: Feb 10, 2011, 10:36:02 AM
+ */
+
+/**
+ * @author ygg001
+ * 
+ */
+public class StubbornInput {
+	Scanner in;
+
+	public StubbornInput() {
+		in = new Scanner(System.in);
+	}
+
+	public int nextInt(String prompt, String errorMessage) {
+		System.out.print(prompt);
+		int x = Integer.parseInt(in.next());
+		return x;
+	}
+
+	public boolean nextBool(String prompt, String errorMessage) {
+		System.out.print(prompt);
+		boolean b = Boolean.parseBoolean(in.next());
+		return b;
+	}
+}

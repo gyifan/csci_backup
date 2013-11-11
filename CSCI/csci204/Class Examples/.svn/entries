@@ -1,0 +1,55 @@
+8
+
+dir
+21701
+https://svn.eg.bucknell.edu/csci204/s11/Class/Class%20Examples
+https://svn.eg.bucknell.edu/csci204
+
+
+
+2011-04-22T14:49:28.748260Z
+21424
+lwittie
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4fbfbf4-8a3c-0410-ab9f-d312241629b4
+
+.classpath
+file
+
+
+
+
+2011-03-30T15:41:50.000000Z
+9b8154506b9055a8398c0cc323c260c6
+2011-01-24T18:53:56.276455Z
+19371
+lwittie
+
+.project
+file
+
+
+
+
+2011-03-30T15:41:50.000000Z
+9502b60b9b01c5c28808a3d957357714
+2011-01-24T18:53:56.276455Z
+19371
+lwittie
+
+src
+dir
+

@@ -1,0 +1,15 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab #3
+Date: 09/13/2011
+
+Problem1
+
+(1.1)
+Since I generate my solution for pre-lab3 by copying the base value of square array and adding 4 bytes for the next value, the answer is very same to the compiler generated answer. However, I do notice that the base value in the memory map didn't start on a whole number like 0x0000000000600000. However, the compiler declared a few more variables before the base value of square, such as __preinit_array_end,etc. 
+
+(1.2)
+The symbol T means this address is in the text(code) section
+
+(1.3)
+The symbol B means this address is in the uninitialized data section (known as BSS)

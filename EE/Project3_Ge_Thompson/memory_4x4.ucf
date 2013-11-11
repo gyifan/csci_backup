@@ -1,0 +1,8 @@
+NET ps2_clk LOC = M16;
+NET ps2_data LOC = M15;
+NET sysclk LOC = T9;
+NET rgb<2> LOC = R12; // RED
+NET rgb<1> LOC = T12; // GREEN
+NET rgb<0> LOC = R11; // BLUE
+NET hsync LOC = R9;
+NET vsync LOC = T10;

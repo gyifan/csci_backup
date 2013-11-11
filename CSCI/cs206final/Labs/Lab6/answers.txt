@@ -1,0 +1,60 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab6
+Date: 10/4/2011
+
+Problem 1
+
+(1.1)
+
+A	B	S	C
+
+0	0	0	0
+
+0	1	1	0
+
+1	0	1	0
+
+1	1	0	1
+
+(1.2)
+
+1. Using only OR, AND, NOT
+	S = A*B' + A'*B		C = A*B
+
+2. Using only NAND, NOR
+	S = ((A*(B*B)')'*((A*A)'*B)')'
+	C = ((A*B)'*(A*B)')'
+
+Problem 2
+
+(2.1)
+
+A	B	Cin	S	Cout
+
+0	0	0	0	0
+
+0	1	0	1	0
+
+1	0	0	1	0
+
+1	1	0	0	1
+
+0	0	1	1	0
+
+0	1	1	0	1
+
+1	0	1	0	1
+
+1	1	1	1	1
+
+(2.2)
+
+1. Using only OR, AND, NOT
+	S = A'*B'*C + A'*B*C' + A*B*C + A*B'*C'
+	C = A*B + B*C + A*C
+
+2. Using only NAND, NOR
+	S = (((A*A)'*(B*B)'*C)'*((A*A)'*B*(C*C)')'*(A*B*C)'*(A*(B*B)'*(C*C)')')'
+	C = ((A*B)'*(B*C)'*(A*C)')'
+

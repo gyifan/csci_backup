@@ -1,0 +1,1 @@
+'From Squeak4.1 of 17 April 2010 [latest update: #9957] on 9 February 2012 at 5:03:57 pm'!Object subclass: #LabB	instanceVariableNames: ''	classVariableNames: ''	poolDictionaries: ''	category: 'LabB'!!LabB methodsFor: 'problem' stamp: 'YG 2/9/2012 17:00'!length: arg	"get the length"		^arg length.! !

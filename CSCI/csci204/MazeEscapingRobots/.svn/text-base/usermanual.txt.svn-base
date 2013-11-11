@@ -1,0 +1,111 @@
+    _____                        
+  /     \ _____  ________ ____  
+ /  \ /  \\__  \ \___   // __ \ 
+/    Y    \/ __ \_/    /\  ___/ 
+\____|__  (____  /_____ \\___  >
+        \/     \/      \/    \/ 
+___________                           .__                
+\_   _____/ ______ ____ _____  ______ |__| ____    ____  
+ |    __)_ /  ___// ___\\__  \ \____ \|  |/    \  / ___\ 
+ |        \\___ \\  \___ / __ \|  |_> >  |   |  \/ /_/  >
+/_______  /____  >\___  >____  /   __/|__|___|  /\___  / 
+        \/     \/     \/     \/|__|           \//_____/  
+__________      ___.           __          
+\______   \ ____\_ |__   _____/  |_  ______
+ |       _//  _ \| __ \ /  _ \   __\/  ___/
+ |    |   (  <_> ) \_\ (  <_> )  |  \___ \ 
+ |____|_  /\____/|___  /\____/|__| /____  >
+        \/           \/                 \/ 
+
+Presented by: Yifan Ge, Kevin Thomas, Davis Gallinghouse
+
+Guaranteed to run on Red Hat Enterprise Linux 5
+(run on other operating systems at your own risk).
+
+Part 1: Getting Starting
+
+1.  Launch Eclipse in Linux.
+	(Applications -> Programming -> Eclipse)
+	
+2.  If MazeVizualizer.java is not already open, double click it from the package
+	explorer on the left hand side.
+	(MazeEscapingRobots -> src -> (default package) -> MazeVizualizer.java)
+
+3.  To execute (run) the program file click the green play button on the toolbar
+	or alternately hit Ctrl+F11 on your keyboard.
+
+4.  At this point Java should have executed all the startup code and there
+	should be a graphical user interface (GUI) on the screen from which the game
+	will be played.
+	
+Part 2: Beginning the Game
+
+1.  When looking at the top left of the GUI, you should notice two drop down
+	labels.  The first is entitled "File."  Under here, you can either load a
+	maze by choosing any of the numbered maze files (e.g. maze1.txt, maze2.txt
+	etc.) or you have the option to quit the game.
+	
+	N.B. By loading the maze "random.txt", a new maze will be generated randomly
+	every single time.  Try it out yourself!
+
+2.  Now you should notice black and white lines in the center of the GUI to
+	represent the maze, where black represents walls.
+	
+3.  Once you have a maze loaded, you will want to choose a robot to place in
+	the maze.  To the right of "File" is a "Robot" drop down menu.  Here are
+	the different robots you can choose to traverse the maze:
+	
+	Random Robot: will randomly choose from either turning left, turning right,
+	or moving forward.
+	
+	Right Hand Robot: will always keep its right side against a wall. If it
+	doesn't start against a wall, it will move forward till it gets to one.
+	
+	Memory Robot: will remember how many times it has stepped on every given
+	square.  If it has the option to choose between two paths, it will choose
+	the least stepped-on path.  Given two equal values, it will just choose
+	the right path.
+	
+	Ninja Robot: will teleport forward 20 spaces, every time it moves ten
+	additional spaces.
+	
+3. 	Click one, and it will be placed on the starting point of the maze.
+	Notice the grey circle, with a line representing its current orientation.
+    Now you are ready to begin playing the game!
+
+Part 3: Playing the Game
+
+1.  On the bottom right of the GUI you should notice four different buttons:
+
+	Play: will cause the robot to continuously take steps.  This button will
+	turn into a "Stop" button whenever it is pressed.
+	
+	End: will skip to the robot either escaping the maze, or the robot giving
+	up after a given number of moves.
+	
+	Step: allows you to click through the game a single move at a time and
+	see how the robot chooses its movement.
+	
+	Reset: places the robot back on the starting point and resets the move
+	count.
+
+2.  On the top right of the GUI you should see three data fields:
+
+	Current Maze: displays the file name of the current maze text file.
+	
+	Robot: displays the name of the robot currently in the maze.
+	
+	Number of Moves: shows how many moves the robot has taken.
+	
+3.  Under the data fields is a check box labeled "Show visited halls?"
+	This allows you to see how often the robot has stepped on a given square.
+	The square will be white if it has never been stepped on and will get
+	bluer the more often it gets stepped on.  If you want to enable this
+	function you will need to hit the reset button after checking the box.
+	
+Part 4: Finishing the Game (assuming you are bored of the game)
+
+1.  As mentioned in Part 2, under the "File" drop down menu, there is an option
+	to quit.
+	
+2.  As an alternative, you can click the "X" at the very top-right of the GUI.

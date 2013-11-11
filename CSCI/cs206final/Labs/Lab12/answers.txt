@@ -1,0 +1,14 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab12
+Date: 11/22/2011
+
+Problem 1
+
+After we connect the keyboard and display, the value at address Oxffff0008 change to Ox00000001, where the LSB represent the ready bit. Since we connect the keyboard and display after assembled the code, the ready bit is set to 1. Therefore, the the display prints 'q'.
+
+Problem 3
+
+When we set the run speed to 1 per second, the display has delay and skip words if I type a little faster. When we set the run speed to 30 per second, the problem still there, but a little better. After setting it to max, the problem seem to be gone. 
+
+The reason for skipping the words is the responding speed is slower than our typing speed. 

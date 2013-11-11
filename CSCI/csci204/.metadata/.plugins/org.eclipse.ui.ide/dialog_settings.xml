@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="365" key="DIALOG_Y_ORIGIN"/>
+		<item value="499" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="ExternalProjectImportWizard">
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="545" key="DIALOG_WIDTH"/>
+		<item value="105" key="DIALOG_Y_ORIGIN"/>
+		<item value="604" key="DIALOG_HEIGHT"/>
+		<item value="583" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

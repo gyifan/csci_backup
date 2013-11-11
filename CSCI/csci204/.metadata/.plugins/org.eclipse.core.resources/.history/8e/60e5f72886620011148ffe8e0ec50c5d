@@ -1,0 +1,37 @@
+public class Foo {
+	public int x;
+	public String y;
+	public int[] z;
+	public Apple[] w;
+
+	public Foo() {
+		x = 3;
+		y = "hi";
+		z = new int[3];
+		w = new Apple[2];
+	}
+
+	public class Apple {
+		public String type;
+
+		public Apple(String s) {
+			type = s;
+		}
+	}
+
+	public static void main(String[] args) {
+		Foo f = new Foo();
+		f.z[0] = 9;
+		f.w[1] = new Apple("Granny Smith");
+		f.x = 7;
+		f.z = new int[3];
+		f.z[1] = 5;
+		System.out.println(f.x);
+		System.out.println(f.y);
+		System.out.println(f.z[0]);
+		System.out.println(f.z[1]);
+		System.out.println(f.w[1].type);
+		System.out.println(f.w[0].type);
+	}
+
+}

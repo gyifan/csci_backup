@@ -1,0 +1,3 @@
+Your program must produce output i   n the same f  ormat as the Linux wc utility when it is run on
+one file. Modify the output in the program t           o make it generate the same output as wc Linux
+utility. You can space your output using                tabs. A tab in Java is the character '\t'.

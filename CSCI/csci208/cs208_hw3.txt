@@ -1,0 +1,110 @@
+Yifan Ge
+CSCI 208 Homework 3
+2/28/2012
+
+Question 1:
+	Stack					Heap
+      ---------				 ------------------------
+   f |       --|-Foo*------------------>| x [3->7      ] int     |
+      ---------		----------------|-y-[--        ] String* |
+			|  -------------|-z-[--        ] int*    |
+			|  |  ----------|-w-[--	       ] Apple** |
+			|  |  |          ------------------------
+			|  |  |          -------------------
+			--------------->|hi		    | String
+		           |  |          -------------------
+			   |  |          -------------------
+			   ------CUT--->|0->9               | int
+		           |  |          -------------------
+			   |  |          -------------------
+			   |  |         |0                  | int
+			   |  |          -------------------
+			   |  |          -------------------
+			   |  |         |0		    | int
+			   |  |          -------------------
+			   |  |          -------------------
+			   |  --------->|		    | Apple*
+			   |		 -------------------
+			   |		 -------------------
+			   |	        |               ----|-Apple*--------
+			   |		 -------------------		   |
+			   |		 -------------------------	   |
+			   |    --------|-type-[--	] String* | Apple<--
+			   |             -------------------------
+			   |	|	 -------------------------
+			   |	------->|Granny Smith		  | String
+			   |		 -------------------------
+			   |		 -------------------
+			    ----------->|0		    | int
+					 -------------------
+					 -------------------
+					|0->5		    | int
+					 -------------------
+					 -------------------
+					|0		    | int
+					 -------------------
+
+Question 1.1:
+The System.out.println(f.w[0].type) will through an null point exception as 
+w[0] is only declared as a Apple pointer. But the actual Apple object has not 
+been constructed. So the value of w[0] is null. Thus, we can't access w[0].type.
+
+Question 2.1:
+The output is the following:
+7		//add 7 to the list
+5		//minus 2 from 7
+3 5		//add 3 to the list
+3 1		//minus 4 from 5
+2 3 1		//add 2 to the list
+2 1		//minus 3 from 1, not enough; minus 2 from 3
+18 2 1		//add 18 to the list
+18		//minus 3 from 1, not enough; minus 2 from 2
+6 18		//add 6 to the list
+		//minus 30 from 18, not enough; minus 12 from 6, not enough.
+
+Question 2.2:
+I would choose C2 to be slightly larger than C1. So the list can be consumed
+to NULL. Otherwise, too much member may be used by the program.
+
+Question 2.3:
+As everytime when we add node to the list, we allocate a space for the new
+node in the heap. But when we consume the list, we never free the list. This
+will memory leakage, since the pointer is gone but the data is still on the
+heap. Solution: Add free(temp) before the first return in the consume method.
+
+Question 2.4:
+At Point 1, the temp and tail are pointing at the same node object on the
+heap. The node object is still valid at this time as its value has not been
+consumed to zero yet. If we free this node space, tail may be pointing to
+invalid value on the heap.
+
+Infinite loop that prints all 7's.
+
+		Stack					Heap
+   main:
+       --------------------                     ----------------------
+    l | head [   --]-Node*-|-Fifo------------->| x [0->5->1   ] int   | Node
+      | tail [   --]-Node*-|------------------>| previous [   ] Node* |
+       --------------------        ----------->| next [       ] Node* |     
+   produce1:(Removed after return) | ---------> ----------------------      
+       --------------------        | |       REPLACED AT THE SAME LOCATION BY
+    x |5                   | int   | |          ----------------------
+       --------------------        | |         | x [7         ] int   | Node
+       --------------------        | |   ----->| previous [ --]-Node*-|-------
+    n |                 ---|-Node*-- |   |     | next [     --]-Node*-|---   |
+       --------------------          |   |      ----------------------   |   |
+   consume:(Removed after return)    /   |                ^     ^        |   |
+       --------------------         /    |                |     |        |   |
+    v |4                   | int    |    |                |     |        |   |
+       --------------------         |    |                |     ----------   |
+       --------------------         |    |                |                  |
+ temp |                 ---|-Node*---    |                --------------------
+       --------------------              |
+   produce2:(Removed after return)      |
+       --------------------              |
+    x |7                   | int         |
+       --------------------              |
+       --------------------              |
+    n |                 ---|-Node*--------
+       --------------------
+

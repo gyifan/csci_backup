@@ -1,0 +1,112 @@
+/**
+ * CSCI 204, Yifan Ge, Kevin Thomas, Davis Gallinghouse
+ * Assignment MazeEscapingRobots
+ */
+ 
+ ________                .__               
+\______ \   ____   _____|__| ____   ____  
+ |    |  \_/ __ \ /  ___/  |/ ___\ /    \ 
+ |    `   \  ___/ \___ \|  / /_/  >   |  \
+/_______  /\___  >____  >__\___  /|___|  /
+        \/     \/     \/  /_____/      \/ 
+ 
+ 
+ What classes do we need? (CRC)
+ 
+ 	This, I believe is pretty much answered for us already. However, for the
+ 	sake of having a formal writeup all in one place, I'll go through it here.
+ 	
+ 	MazeVizualizer
+ 		Program entry point. Unless we want to do something extra, we should
+ 		never have to touch this.  Calls the MazePanel class.
+ 	
+ 	MazePanel
+ 		Subclass of JPanel that draws the maze for the GUI. This could be
+ 		changed to draw the maze in newer, fancier, more interesting ways.
+ 		Calls the Maze class.
+ 	
+ 	Maze (implements IMaze)
+ 		An abstraction of a maze. Keeps track of where the walls and paths are
+ 		in a maze, as well as the size of the maze and where its entrance and
+ 		exit are. Also keeps track of the filename of the maze, for reasons
+ 		that are beyond my understanding.  Calls the robot class.
+ 		
+ 		-maze:char[][]
+ 		-mazeFile:File
+ 		-visitCounters:int[][]
+ 		+getFileName():String
+ 		+getNumRows():int
+ 		+getNumCols():int
+ 		+getStartingPoint():Point
+ 		+isExit(x:int,y:int):boolean
+ 		+isWall(x:int,y:int):boolean
+ 		+resetVisited()
+ 		+visited(x:int,y:int):int
+ 		+recordVisitation(p:Point)
+ 		
+ 	Robot (implements IRobot)
+ 		Responsible for using some algorithm to traverse a given maze.
+ 		
+ 		-moveCounter:int
+ 		-location:Point
+ 		-direction:Mark
+ 		-nextLocation:Point
+ 		-nextDirection:Mark
+ 		+enter(m:IMaze)
+ 		+getDirection():Mark
+ 		+getLocation():Point
+ 		+getMoveCount():int
+ 		+runToEnd()
+ 		+step()
+ 		+calcuateNext() (abstract)
+ 	
+ 	RandomRobot (extends Robot)
+ 		Travels through the maze with no rhyme or reason.
+ 	
+ 	RightHandRobot (extends Robot)
+ 		Moves such that its right hand always touches the wall.
+ 	
+ 	MemoryRobot (extends Robot)
+ 		Keeps track of where its gone, and tries to avoid going down the same
+ 		path twice, especially when it knows the path ends in a dead end.
+ 	
+ 	RobotEscapeException
+ 		Exception thrown when a robot escapes the maze. The robot should really
+ 		notify the GUI in some other way, but when you're six classes deep, I
+ 		guess exceptions are the quickest way to make it back up the call stack.
+ 		Still reeks of lazy design to me.
+ 	
+ 	RobotMark
+ 		An enum that specifies various directions the robot could face and
+ 		various objects in the maze (walls, exits, entrances, etc.)
+ 
+ What are some possible situations? (Use Cases)
+ 
+ How will we read in a maze file and store its data?
+ 	The maze stores its structure in a two-dimension char array that is
+ 	created from the file passed into the maze's constructor.
+ 	
+ When and how will a robot give up?
+ 	When the robot first reads in the maze, it calculates the distance from
+ 	entrance to exit as if there were no walls and records this. Once it has
+ 	traveled over 1000 times this initial distance, it gives up.
+ 	
+ What class will handle the bulk of running the game?
+ 	The robot is really responsible for handling most everything. Once the GUI
+ 	is drawn and everything instantiated, the robot is responsible for keeping
+ 	track of its position and asking the maze if its next planned move is valid.
+ 	
+ Why are we doing this?
+ 	Why are we here? Are we the result of some strange intergalactic force, or 
+ 	is there really a God?
+ 	
+ When the memory robot can left or right into territory with the same number of
+ visits, which option will it choose?
+ 	It will always choose to go right.
+ 	
+ If the right hand robot does not spawn next to a wall, what will it do?
+ 	It will walk forward until it either runs into the wall and turns, or finds
+ 	a wall to its right side.
+ 
+ 
+ 

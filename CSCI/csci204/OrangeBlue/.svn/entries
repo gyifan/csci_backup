@@ -1,0 +1,95 @@
+8
+
+dir
+21219
+https://svn.eg.bucknell.edu/csci204/s11/p3/Awesome/OrangeBlue
+https://svn.eg.bucknell.edu/csci204
+
+
+
+2011-04-12T02:57:32.462222Z
+21172
+ygg001
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+b4fbfbf4-8a3c-0410-ab9f-d312241629b4
+
+.classpath
+file
+
+
+
+
+2011-03-23T01:56:26.000000Z
+36843db6f8cbe75f03d7b23747b695b0
+2011-03-23T06:05:23.006192Z
+20801
+ygg001
+
+.project
+file
+
+
+
+
+2011-03-23T00:21:48.000000Z
+60b603476acb423bf300dbceb124d105
+2011-03-23T00:23:46.503186Z
+20800
+ygg001
+
+OrangeBlue.jar
+file
+
+
+
+
+2011-03-23T00:21:50.000000Z
+182a2e6c566b1863c4533aef76f2ba2c
+2011-03-23T00:23:46.503186Z
+20800
+ygg001
+has-props
+
+doc
+dir
+
+readme.txt
+file
+
+
+
+
+2011-03-31T01:36:55.000000Z
+14a62ff0160c01e12afe9bf16ef6d2fa
+2011-03-31T03:38:28.107787Z
+20973
+ygg001
+
+src
+dir
+
+testplan.txt
+file
+
+
+
+
+2011-03-31T02:38:54.000000Z
+436ae683afbbb8f69c398b5291cb5d17
+2011-03-31T03:38:28.107787Z
+20973
+ygg001
+

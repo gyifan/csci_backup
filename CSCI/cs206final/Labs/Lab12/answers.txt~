@@ -1,0 +1,8 @@
+Name: Yifan Ge
+Course: CSCI 206 / Prof. Perrone
+Assignement: Lab12
+Date: 11/22/2011
+
+Problem 1
+
+After we connect the keyboard and display, the value at address Oxffff0008 change to Ox00000001, where the LSB represent the ready bit. Since we connect the keyboard and display after assembled the code, the ready bit is set to 1. Therefore, the the display prints 'q'.
