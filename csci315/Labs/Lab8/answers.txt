@@ -1,0 +1,21 @@
+CSCI 315 - Operating System
+Lab 8
+Yifan Ge
+3/21/2013
+
+Problem 1
+1. I didn't observe any problem when my program runs.
+2. Deadlock may occur based on my implementation. When all philosophors
+   are angry at the same time and they all pick up the chopstick on 
+   their left first, deadlock may happen.
+
+Problem 2
+1. As I placed napping(1) in between the philosopher picking up the 
+   left chopstick and the right chopstick, when all of them are hungry
+   simultaneously, they all hold left chopstick while waiting on the
+   right one. Then, deadlock occurs.
+
+Problem 3
+1. Yes. These solutions breaks the symmetry and the circular wait. 
+   Therefore, the modified function does not have required circular 
+   relationship for deadlock. They eliminate all the potentials.

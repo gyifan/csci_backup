@@ -1,0 +1,26 @@
+CSCI 315 - Operating System
+Lab 11
+Yifan Ge
+4/18/2013
+
+2.2
+After adding the symbolic link file in the bin/ directory by using this
+command
+	ln -s ./.. up
+the ./traverse .. ran into an infinite loop and eventually died on
+	Failed to open read only file - : No such file or directory
+
+Problem 3
+3.1
+	chmod mode filename
+
+3.2
+	touch filename
+
+3.3
+	touch filename
+
+3.4
+When the application needs mallocation a character array to store the file
+name, knowing the maximum file name length can help the application to 
+determine how many bytes it needs to mallocate.

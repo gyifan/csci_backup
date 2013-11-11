@@ -1,0 +1,8 @@
+Pre-Lab 7: 28/30
+1) Also, pipes are uni-directional while sockets are bi-directional. Sockets
+are also best for communication over a network. (-2).
+
+Lab 7: 97/100
+1: 60/60
+2: 37/40
+2.5) You should use getaddrinfo() or getnameinfo() instead. (-3)

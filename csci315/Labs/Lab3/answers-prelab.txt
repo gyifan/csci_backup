@@ -1,0 +1,27 @@
+CSCI 315 - Operating System
+Lab 3 - Prelab 3
+Yifan Ge
+1/31/2013
+
+1. From the heap-test.c program, we obtain the following output.
+     
+     memory in heap Child: 10
+     memory in heap Child new: 5
+     memory in heap Parent: 10
+   
+   This output indicates that child inherit the a copy of its parent's
+   heap. Also, this heap is unique and located at different memory location
+   as its parent's copy. As we can see, the child can modify the heap. But
+   the parent's copy didn't change.
+
+2. Pipe is considered as an open file by the processors. After create the
+   pipe, the parent add the pipe into the open file table. After calling
+   fork, the child will inherit the open file table from its parent. Thus,
+   as long as we can remember the file desciptor fro the pipe in and out, 
+   the pipe can be accessed by the child.
+
+3. The pipe is very similar to the Linux files when we use it. In both cases,
+   we use write, read with the specific file descriptors to access them. 
+   However, the difference is that the file descriptors for input and output
+   are different in pipe implementation. On the other hand, Linux files has
+   only one file descriptor for both input and output. 

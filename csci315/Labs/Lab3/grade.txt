@@ -1,0 +1,12 @@
+Pre-lab 3:
+    P1: 15/15
+    P2: 15/15
+    Total: 30/30
+Lab 3:
+    P1: 48/50
+        --> magic number 10 in loop condition - null-termination is better
+        (or define message length or use strlen() on a null-terminated
+        string) (-2)
+    P2: 48/50
+        --> magic number (-2)
+    Total: 96/100

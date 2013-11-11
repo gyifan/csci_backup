@@ -1,0 +1,79 @@
+/*
+ * CSCI 315 - Operating System
+ * Lab4
+ * Yifan Ge
+ * 2/7/2013
+ */
+
+===============================================================================
+Problem 2
+1. After running the following in the command line 
+	gcc -std=gnu99 -Wall summation.c -o summation
+   it returns 
+	summation.c: In function ‘main’:
+	summation.c:76: warning: unused variable ‘status’
+	/tmp/ccHxnhPq.o: In function `SumExp':
+	summation.c:(.text+0x86): undefined reference to `pow'
+	/tmp/ccHxnhPq.o: In function `main':
+	summation.c:(.text+0x29d): undefined reference to `pthread_create'
+	summation.c:(.text+0x31f): undefined reference to `pthread_join'
+	collect2: ld returned 1 exit status
+   The undefined references include: 'pow', 'pthread_create', and 'pthread_join'
+
+2. pow(3) requires linking with -lm.
+   pthread_create & pthread_join requires linking with -lpthread
+
+3. After running the following in the command line
+	gcc -std=gnu99 -Wall summation.c -o summation -lm -lpthread
+   it returns 
+	summation.c: In function ‘main’:
+	summation.c:76: warning: unused variable ‘status’
+   which shows no more undefined references.
+
+===============================================================================   
+Problem 3
+1. The main thread use pthread_create when creating other threads. In 
+   pthread_create, user can pass a function pointer with its argument to the
+   generated thread. Within the function, the thread can caste back the 
+   void pointer to its original type and obtain data that way. 
+
+2. Since we need to create an array of pointers, using calloc is preferable.
+   As malloc will only allocates a chunk of memory, using it will be harder
+   to locate the starting address of each element in the array.
+
+3. The detached state of a thread can be specified in the attributes when 
+   creating the thread as detached or joinable. Detached thread means that it
+   doesn't need the main thread to wait for it with pthread_join(). When it 
+   terminates, its resources can be released immediately. On the other hand,
+   joinable thread need the main thread to wait for it to release its
+   resources. 
+   
+   In our case, since we need to read the output after the thread terminates,
+   we need to use pthread_join() to get the value passed by pthread_exit().
+   Therefore, we have to make the thread joinable.
+
+4. The main thread uses pthread_join() to get the void pointer passed by 
+   pthread_exit() from the specified thread. pthred_join() takes the tid and
+   and a void pointer as parameters and put the value that the target thread
+   supplied to pthread_exit() into the location pointed to by the void
+   pointer.
+
+5. After several experiments, if one of the child threads call exit(3), the
+   whole process will exit and stop execution. This includes all the other 
+   threads.
+
+6. After several experiments, if one of the child threads call execl(3), the
+   whole process will stop executing the original text. The rest of the test
+   in the process will be replaced by the function specified by execl(3). 
+   Thus, all other threads will stop execution as well.
+
+===============================================================================
+
+Problem 5
+1. No. If we only had one thread running, that time might be the actual time
+   when that very thread terminates. But since we have multiple threads and 
+   processes running at one CPU, the function of getting the time is probably
+   not executed right before the thread terminates. 
+
+2. I put the get the time into a separate function, and calls the function 
+   at print time right before the termination.

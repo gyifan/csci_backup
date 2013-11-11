@@ -1,0 +1,10 @@
+Pre-lab)
+    P1: 20/20
+    P2: 10/10
+    Pre-lab Total: 30/30
+Lab)
+    P2: 40/40
+    P3: 40/40
+    P4: 18/20
+        --> sleep time is in seconds (-2)
+    Lab Total: 98/100

@@ -1,0 +1,35 @@
+CSCI 315 - Operating System
+Lab 6
+Yifan Ge
+2/21/2013
+
+Pre-lab
+Problem 2
+Semaphore: an integer value can range over an unrestrcited domain.
+Mutex: an integer value can range only between 0 and 1 (aka binary semaphore).
+
+pthread_mutex_init(): This function initializes mutex referenced by mutex with
+	specified attributes.
+
+pthread_mutex_lock(): This function tries to lock the mutex object referenced by
+	mutex argument. If the mutex is already locked, the function will be
+	blocked until the mutex is released.
+
+pthread_mutex_unlock(): This function releases the mutex object referenced by 
+	mutex object. After the release, the mutex will be available for other
+	threads that are blocked by pthread_mutex_lock().
+
+sem_init(): This function initializes the unnamed semaphore at the address 
+	pointed to by sem argument with the initial value specified by value
+	argument.
+
+sem_wait(): This function decrements the semaphore pointed to by sem. If its
+	value is greater than zero, then the decrement proceeds, and returns.
+	Otherwise, the call blocks until the value is greater than zero, or 
+	a signal handler interrupts the call.
+
+sem_post(): This function increments the semaphore pointed to by sem. If it
+	results the value becoming greater than zero, then another process or
+	thread blocked in a sem_wait() call will be woken up and proceed to
+	lock the semaphore.
+

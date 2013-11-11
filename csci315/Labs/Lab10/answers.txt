@@ -1,0 +1,63 @@
+CSCI 315 - Operating System
+Lab 10
+Yifan Ge
+3/27/2013
+
+==========================================================================
+Prelab:-
+
+Problem 1
+External Fragmentation:-
+Since the memory space is considered as a single peice of memory, it will
+not create internal fragmentation. Thus the only possible fragmentation is
+external.
+
+Problem 2
+1. The speed of allocating the requested memory
+2. The total percentage of utilization after certain iteration of 
+   allocation and deallocation.
+
+Problem 3
+
+double average_frag(){
+	struct dnode *temp;
+	struct block *tData;
+	size_t size = 0;
+	int count = 0;
+	
+	while(temp=free_list->front;temp!=NULL;temp=temp->next){
+		tData = (struct block *)temp->data;
+		size += tData->size;
+		count ++;
+	}
+
+	return (double)size/(double)count
+}
+===========================================================================
+
+Problem 1
+
+/* Comment: The given pseudo-code in the lab has one obvious problem.
+ * - It doesn't deal with NULL pointer in the loop when allocate() failed.
+ * So I decided to add a if statement before deallocate()
+ */
+
+srandom(seed);
+int r=0;
+void *p=NULL;
+
+while(r<requests){
+	s = rand()%900 + 100;
+	p = allocate(algorithm, s);
+	if(NULL == p);
+	else deallocate(p);
+	
+	r++;
+}
+
+Problem 2
+
+From the analysis shown in the spreasheet, we can clearly see the distribution
+differences among each policies. All of them shows a bell distruction shape.
+However, best-fit is centered at 28.38, first-fit 26.66, worst-fit 42.00.
+Therefore, I think best-fit is more efficient allocating policy.

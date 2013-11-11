@@ -1,0 +1,50 @@
+Yifan Ge
+CSCI315 - Operating System
+Lab2 - Prelab
+01/23/2013
+
+ps(1) - 
+    It's short for Process Snapshot. User can use ps [options] to display
+    information about a selection of the active processes based on the 
+    option in the brackets.
+
+kill(1) - 
+    It's mostly used for terminating a process. But it's a command that 
+    send specified signals to the specified process or process group. It
+    may have nothing to do with termination. Mostly used signals are 
+    SIGTERM and SIGKILL. The default signal is SIGTERM.
+
+fork(2) -
+    It duplicates the process in which it is called. The child will be
+    assigned a new pid. The child created by folk inherits the parent's 
+    virtual address space, open file descriptors, open message queue 
+    descriptors, open directory streams, and more. 
+
+exit(2) -
+    This function terminates the calling process. It closes open file
+    descriptors of the process. The children and parent of the process
+    are sent a signal for notification.
+
+wait(2) -
+    This system call suspends executation of the calling process for 
+    a state change in its children. This change can be termination,
+    stopped by a signal, or resumed by a signal. If wait is ended by
+    the termination of the child, the system will release the resources
+    associated with the child.
+
+waitpid(2) -
+    This system call is similar to wait(2). Instead of waiting for the
+    state change of any of its children, this call is waiting for the
+    state change of the specified child with the designated pid.
+
+execv(2) -
+    The exec(2) family of functions replace the current process image
+    with a new process image. In specific, execv(2) allows the new
+    process to inherit the environment of the calling process image,
+    which is stored in extern char **environ.
+
+system(3) -
+    This function will execute a command by calling /bin/sh -c command.
+    It will return upon finishing the command. SIGCHILD will be blocked.
+    SIGINT and SIGQUIT will be ignore during execution.
+

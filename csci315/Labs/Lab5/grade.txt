@@ -1,0 +1,12 @@
+Lab05:
+    1.0 ==> 10/10
+    2.0 ==> 30/30
+    3.0 ==> 30/30
+    4.0 ==> 30/30
+
+Good job.  I think you were the only one who came up with the rather elegant
+solution of adding a bigger number in the SIGUSR1 handler to make it obvious
+when the signal was received.  I think perrone used to have people do it this
+way in previous years.
+
+Total: 100/100

@@ -1,0 +1,23 @@
+CSCI 315 - Operating System
+Lab9 - prelab
+Yifan Ge
+3/20/2013
+
+1. Segmentation fault is usually caused by the program trying to access 
+   illegal addresses in the memory. 
+2. Using doubly-linked lists can make it easier for the OS to move elements 
+   from one list to another list. Also it keeps track of all the free and
+   used blocks. However, depends on the algorithm we are using, we may need
+   to sort through the list everytime when we have a new allocation.
+3. Malloc will pick an element with enough space in free list and splits into 
+   two elements. One of these element with needed space will be place to used
+   list. We may also use arrays to keep track of the available and used
+   spaces. But doubly-linked lists are more efficient and easier to operate.
+4. Internal fragmentation occurs when we have separate the memory into fixed
+   slices, the empty space in each used frame is called internal 
+   fragmentation.
+5. External fragmentation occurs when in the RAM as whole, there will some 
+   space just can't fit in any process or won't be able to be used anymore.
+6. First fit is allocating the first hole that is big enough for the request.
+7. Best fit is allocating the smallest sized hole that can fit the request.
+8. Worst fit is allocating the largest sized hole that can fit the request.

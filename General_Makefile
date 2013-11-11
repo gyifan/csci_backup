@@ -1,0 +1,19 @@
+CC=gcc
+CFLAGS= -std=gnu99 -Wall -g #-DDEBUG
+ODIR=./obj
+SRC=./src
+BIN=./bin
+
+EXECS = $(BIN)/
+
+all: $(EXECS)
+
+$(BIN)/: $(SRC)/
+        $(CC) $(CFLAGS) -o $@ $^ $(LIBS)
+
+.PHONY: clean
+
+clean:
+        rm -f *~ core* $(BIN)/*
+
+

@@ -1,0 +1,76 @@
+CSCI315 - Operating System
+Lab2 - Problem 2 & 3
+Yifan Ge
+01/24/2013
+
+2.1
+    open:-
+        open(2) returns a file descripter with the given pathname for the file
+        and flags will be set accordingly. If the file not find, it will return
+        -1. In this case, O_RDWR set the two low bits of the flag as the access
+        mode.
+
+    read:-
+        read(2) tries to read the file specified by the file descriptor up to 
+        the designated number of bytes. It will put the read content into the
+        buffer specified in the parameter.
+
+2.2
+    OUTPUT:-
+
+    In parent: ch1 = 0
+    In parent: ch1 = 1
+    In child: ch2 = 2
+
+    Explanation:-
+        The parent opens the file, data.txt, and store the file descriptor in fd.
+        It reads and prints the first byte and creates a child. After the child 
+        is created, the parent and the child will all attempt to read the same 
+        file with the same file descriptor. In this case, the parent reads it 
+        first then child reads it. The output is printed accordingly.
+
+3
+    OUTPUT:-
+    
+    parent: 0
+    child: 0
+    parent: 3
+    child: 1
+    parent: 6
+    child: 2
+    parent: 9
+    child: 3
+    parent: 12
+    child: 4
+    parent: 15
+    child: 5
+    parent: 18
+    child: 6
+    child: 7
+    [ygg001@brki164-lnx-20 Lab2]$ child: 8
+    child: 9
+    child: 10
+    child: 11
+    child: 12
+    child: 13
+    child: 14
+    child: 15
+    child: 16
+    child: 17
+    child: 18
+    child: 19
+
+    Explanation:-
+        The output does match what I expected. Initially, the parent declares
+        the variables. After calling fork, the child will get a complete copy
+        of all the variable. The reason for num can be called seperately is 
+        because that the variables are copied and store in a different 
+        memory location for the child process. Although the names are the same
+        but the variables are completely not related and can't interfere each
+        other. 
+       
+        Since the parent and child are running seperately. The parent ends
+        before the child does. Thus, it exit out to the command line. However,
+        the child process is still printing. Therefore, we see the child 
+        output after the exit of the main function. Without calling wait, 
+        the child process may become "Zombie" child, eating the resources.

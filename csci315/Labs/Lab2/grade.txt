@@ -1,0 +1,17 @@
+Prelab02:
+    1.0 ==> 15/15
+    2.0 ==> 14/15
+
+Lab02:
+    1.0 ==> 50/50
+    2.0 ==> 5/5
+    2.1 ==> 10/10
+    2.2 ==> 10/10
+    3.0 ==> 25/25
+
+Good job overall.  Make sure you include all header files for any system or 
+library calls you make. Compiling with the -Wall flag set will give you 
+warnings of implicit function declaration which indicates that you are 
+missing headers/function prototypes.
+
+Total: 129/130
