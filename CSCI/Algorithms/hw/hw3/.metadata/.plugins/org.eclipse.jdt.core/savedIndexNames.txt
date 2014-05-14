@@ -1,0 +1,16 @@
+INDEX VERSION 1.126+/nfs/unixspace/linux/accounts/student/y/ygg001/Algorithms/hw/hw3/.metadata/.plugins/org.eclipse.jdt.core
+4244685482.index
+4221956225.index
+4076180741.index
+773061461.index
+2033996007.index
+3597012572.index
+519792651.index
+2131564683.index
+4203535646.index
+4070759716.index
+1863264483.index
+3442963557.index
+3656164680.index
+167176521.index
+2911330305.index

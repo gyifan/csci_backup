@@ -1,0 +1,36 @@
+CSCI 311 - Algorithms and Data Structure
+Assignment 3
+Yifan Ge
+2/26/2014
+
+Random input:
+With the random input, MedOf3QS, SmallFilesQS, and SmallFilesMed3QS achieved
+better performance than the orginal implementation. The SmallFilesQS works
+the best. The percentage improvement is in the xlsx file. From the lecture, 
+I expected RandomQS performe better and SmallFilesMed3QS perform the best.
+But RandomQS performed worse than the original. I think this is because the 
+overhead of randomization lowered performance. Since the input is already 
+randomized, the quality of pivot is improved than the original implementation. 
+But the overhead of randomization slowed down the process. Similarly to the
+poor performance of SmallFileMed3QS. In terms of the performance of
+SmallFilesQS, it matches pretty well with our expectation. By combine insertion
+with Quicksort preventing more partition, the performance increased
+significantly.
+
+In-order input:
+I think this is where randomization and median of three show their value. 
+Because the in-order input. The orginal QS will have O(n^2) performance, 
+which cause the program impossible to sort the 20million input. However, by
+Randomly pick the pivot in RandomQS, the performance theoretically should 
+match the performance as with Random input. MedOf3QS will performe the best
+in terms of picking pivot because it will always pick the median of the whole
+array. Since SmallFilesQS is still using original partition, the method is not
+going to work as the same reason as original QS. SmallFilesMed3QS combines the 
+benefit of insertion and best pivot picking. It achieves the best performance
+of all the methods with in-order input. The performance of each method meets
+my expectation.
+
+Overall, one thing I'm not sure about is that why the in-order input results
+in much higher performance than random input for RandomQS. They should be very
+similar based on theoretical analysis as they both randomly pick the pivot.
+

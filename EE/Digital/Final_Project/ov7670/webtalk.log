@@ -1,0 +1,16 @@
+Release 14.3 - WebTalk (P.40xd)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=02d6636d41b541d29ea7e21b5c3464c2
+ProjectIteration=1
+
+WebTalk Summary
+----------------
+INFO:WebTalk:2 - WebTalk is enabled.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:4 - C:/Users/Hamster/Projects/FPGA/Zedboard/ov7670/usage_statistics_webtalk.html WebTalk report has been successfully sent to Xilinx on 2013-01-28T20:53:26.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.3/ISE_DS/ISE/data/reports/webtalk_introduction.html

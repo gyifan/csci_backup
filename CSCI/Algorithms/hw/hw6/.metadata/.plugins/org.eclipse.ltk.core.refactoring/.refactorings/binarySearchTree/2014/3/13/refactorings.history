@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move 2 elements to &apos;binarySearchTree/src/binarySearchTree&apos;&#x0A;- Original project: &apos;binarySearchTree&apos;&#x0A;- Destination element: &apos;binarySearchTree/src/binarySearchTree&apos;&#x0A;- Original elements:&#x0A;     Directory.java&#x0A;     BST.java&#x0A;- Update references to refactored element" description="Move compilation units" destination="/src&lt;binarySearchTree" element1="/src&lt;{Directory.java" element2="/src&lt;{BST.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1396037904989" units="2" version="1.0"/>
+</session>

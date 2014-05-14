@@ -1,0 +1,58 @@
+Running: C:\Xilinx\14.5\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/tb_ov7670_top_isim_beh.exe -prj H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/tb_ov7670_top_beh.prj work.tb_ov7670_top work.glbl 
+ISim P.58f (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../vga.v" into library work
+Analyzing Verilog file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../motor_system_2.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.5/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../ipcore_dir/frame_buffer.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../ov7670_registers.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../i2c_sender.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../ov7670_controller.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../ov7670_capture.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../debounce.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../clocking.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../ov7670_top.vhd" into library work
+Parsing VHDL file "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/../tb_ov7670_top.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module glbl
+Compiling module vga(1,2,0,640,800,480,0,0)
+Compiling module motor_system_2
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package vcomponents
+Compiling package numeric_std
+Compiling package vl_types
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture behavioral of entity debounce [debounce_default]
+Compiling package textio
+Compiling package std_logic_textio
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
+Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
+Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
+Compiling architecture frame_buffer_a of entity frame_buffer [frame_buffer_default]
+Compiling architecture behavioral of entity ov7670_capture [ov7670_capture_default]
+Compiling architecture behavioral of entity i2c_sender [i2c_sender_default]
+Compiling architecture behavioral of entity ov7670_registers [ov7670_registers_default]
+Compiling architecture behavioral of entity ov7670_controller [ov7670_controller_default]
+Compiling package std_logic_signed
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
+Compiling architecture mmcme2_adv_v of entity MMCME2_ADV [\MMCME2_ADV("OPTIMIZED",10.0,0.0...]
+Compiling architecture bufg_v of entity BUFG [bufg_default]
+Compiling architecture xilinx of entity clocking [clocking_default]
+Compiling architecture behavioral of entity ov7670_top [ov7670_top_default]
+Compiling architecture behavior of entity tb_ov7670_top
+Time Resolution for simulation is 1ps.
+Waiting for 8 sub-compilation(s) to finish...
+Compiled 44 VHDL Units
+Compiled 3 Verilog Units
+Built simulation executable H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/tb_ov7670_top_isim_beh.exe
+Fuse Memory Usage: 91796 KB
+Fuse CPU Usage: 2698 ms

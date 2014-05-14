@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=U:\public\DigitalProject\Final_Project\ov7670\work\ov7670_top.ncd
+OUTFILE=U:\public\DigitalProject\Final_Project\ov7670\work\ov7670_top.bit
+FAMILY=Zynq
+PART=xc7z020-3clg484
+WORKINGDIR=U:\public\DigitalProject\Final_Project\ov7670\work
+LICENSE=ISE
+USER_INFO=179089803_206666323_210542379_963

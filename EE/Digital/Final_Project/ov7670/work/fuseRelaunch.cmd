@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/tb_ov7670_top_isim_beh.exe" -prj "H:/Users/ygg001.BUCKNELL/Downloads/Zedboard_OV7670/ov7670/work/tb_ov7670_top_beh.prj" "work.tb_ov7670_top" "work.glbl" 

@@ -1,0 +1,28 @@
+Command line:
+   tb_ov7670_top_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  60931
+
+Mon Apr 28 08:41:17 2014
+
+
+ Elaboration Time: 3.33842 sec
+
+ Current Memory Usage: 3395.96 Meg
+
+ Total Signals          : 902
+ Total Nets             : 3690311
+ Total Signal Drivers   : 506
+ Total Blocks           : 40
+ Total Primitive Blocks : 29
+ Total Processes        : 273
+ Total Traceable Variables  : 482
+ Total Scalar Nets and Variables : 3696865
+
+ Total Simulation Time: 320.317 sec
+
+ Current Memory Usage: 3238.67 Meg
+
+Mon Apr 28 08:47:05 2014
+
